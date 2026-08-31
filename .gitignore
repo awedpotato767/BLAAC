@@ -1,0 +1,3 @@
+#ignore voices for privacy reasons
+TTS voices/*
+!TTS voices/.gitkeep
