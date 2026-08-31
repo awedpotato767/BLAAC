@@ -1,6 +1,8 @@
 # BLAAC
 ### A custom key chording-based AAC written in Python.
 
+NOTICE: THIS IS NOT CURRENTLY USABLE.
+
 ## Goals
 
 To create a Voice Output Communication Aid (VOCA) that feels unobtrusive and undemanding.

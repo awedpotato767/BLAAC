@@ -1,0 +1,55 @@
+{
+  "format": "open-board-0.1",
+  "id": "url_images",
+  "locale": "en",
+  "name": "URL Images Board",
+  "description_html": "This is an .obf file with images referenced by external URL. It also includes some simple styling.",
+  "grid": {
+    "rows": 2,
+    "columns": 2,
+    "order": [
+      ["b1", "b3"],
+      [null, "b2"]
+    ]
+  },
+  "buttons": [
+    {
+      "id": "b1",
+      "label": "happy",
+      "image_id": "i22",
+      "background_color": "rgb(200, 200, 200)",
+      "border_color": "rgb( 255, 0,  0) "
+    },
+    {
+      "id": "b2",
+      "label": "sad",
+      "image_id": "i67",
+      "background_color": "rgb( 200, 200, 200) ",
+      "border_color": "rgb(0, 0, 255)"
+    },
+    {
+      "id": "b3",
+      "label": "strong feelings",
+      "load_board": {
+        "path": "boards/path_images.obf"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "i22",
+      "width": 300,
+      "height": 300,
+      "url": "https://openclipart.org/image/800px/svg_to_png/59389/happy_sun_gm.png",
+      "content_type": "image/png"
+    },
+    {
+      "id": "i67",
+      "width": 300,
+      "height": 300,
+      "content_type": "image/png",
+      "url": "https://openclipart.org/image/800px/svg_to_png/28768/qubodup_Cubikopp_smilies_11.png"
+    }
+  ],
+  "sounds": []
+}
