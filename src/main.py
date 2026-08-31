@@ -1,18 +1,52 @@
 #!python3
 
-#temporary hardcoded values
-default_voice = "../TTS voices/neutral.safetensors"
-
-from pocket_tts import TTSModel
+from pocket_tts import TTSModel, export_model_state
 import scipy.io.wavfile
 import os
-
+import tomllib
 import pyaudio
-CHUNK = 1920
+import logging
+logger = logging.getLogger(__name__)
+
+#config file reading
+with open("../config/Global config.toml","rb") as conf_file:
+    global_config = tomllib.load(conf_file)
 
 #tts initialisation
-tts_model = TTSModel.load_model()
-voice_state = tts_model.get_state_for_audio_prompt(default_voice)
+tts_model = TTSModel.load_model(temp=0.6)
+default_voice_filepath = f"../TTS voices/{global_config["startup"]["default_voice"]}.safetensors"
+default_voice = tts_model.get_state_for_audio_prompt(default_voice_filepath)
+
+ #voice initialisation
+voices = {"default": default_voice}
+voice_directory_files = os.listdir("../TTS voices")
+precached_files = os.listdir("../TTS voices/cache")
+
+#cache wav files for future runs
+for filename in voice_directory_files:
+    name, ext = os.path.splitext(filename)
+
+    #warn for incorrect files
+    if ext != ".safetensors" and ext != ".wav" and ext !="":
+        logger.warning("could not load voice '" + name + "' - invalid file extension" + ext)
+
+    #only cache files without a precached equivalent
+    if ext==".wav" and f"{name}.safetensors" not in voice_directory_files\
+                   and f"{name}.safetensors" not in precached_files:
+        export_model_state(tts_model.get_state_for_audio_prompt("../TTS voices/"+filename),
+                           "../TTS voices/cache/"+name+".safetensors")
+
+#load cached files
+for filename in os.listdir("../TTS voices/cache"):
+    name,ext = os.path.splitext(filename)
+    if ext==".safetensors":
+        voices[name] = tts_model.get_state_for_audio_prompt("../TTS voices/cache/"+filename)
+for filename in voice_directory_files:
+    name,ext = os.path.splitext(filename)
+    if ext==".safetensors":
+        voices[name] = tts_model.get_state_for_audio_prompt("../TTS voices/"+filename)
+
+
 
 #pyaudio initialisation
 audio_dev = pyaudio.PyAudio()
@@ -28,9 +62,10 @@ def play_tts_audio(tts_model, voice_state, text):
     #leave
     stream.close()
 
-
 #test code
-play_tts_audio(tts_model, voice_state, "According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.")
+play_tts_audio(tts_model, voices["default"], "Shall I compare thee to a summer's day? Thou art more fair and more temperate.")
+play_tts_audio(tts_model, voices["neutral"], "Shall I compare thee to a summer's day? Thou art more fair and more temperate.")
+play_tts_audio(tts_model, voices["chatty"], "Shall I compare thee to a summer's day? Thou art more fair and more temperate.")
 
+play_tts_audio(tts_model, voices["everything is fine"], "Shall I compare thee to a summer's day? Thou art more fair and more temperate.")
 
-audio_dev.terminate()
