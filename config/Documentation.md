@@ -2,6 +2,37 @@
 
 ## configuration
 
+### audio feedback
+Each of these options are found in the global settings document.
+
+#### navigation
+
+This has four levels:
+
+1. On focus (default)
+
+ - BLAAC reads each item out when it is focussed.
+
+2. On selection
+
+ - BLAAC reads each item out when it is selected.
+
+3. Chimes
+
+ - BLAAC plays different chimes for successfully entering a new menu, 
+ moving your focus, and 
+ going to the top level menu.
+
+4. Off
+
+#### typing
+
+1. On space
+
+2. On keypress
+
+3. Off
+
 ### voices
 
 #### Using voices
@@ -77,11 +108,18 @@ UNIMPLEMENTED
 There are five menu navigation modes by default: coordinates, smart, search, tab navigation
 and scanning.
 
+In general, move your focus to an item and press space to select it.
+The enter key reads out the whole sentence.
+z undoes the last action, x deletes the entire sentence, and c deletes the last word.
+
+
 #### coordinates
 
-Press the character corresponding to which column it is in (left to right), then which row for grid layout boards.
+Press the character corresponding to which column it is in (left to right), then which row it is in (top to bottom) for grid layout boards.
 
-By default, this is 1-9, representing how many items are to the buttons left or above it. 0 counts as 10, - as 11, = as 12.
+By default, this is 1-9, 0 counts as 10, - as 11, = as 12.
+
+So for an item in the first row and fifth column, press one, five, space.
 
 For six-key input users, there will "qwerty six-key mode" and "hable six-key mode" - where the numerical indeces are replaced with the first letters of the alphabet.
 Qwerty six-key mode is strictly for navigation, it is not enabled while searching or typing sentences.
@@ -119,27 +157,17 @@ This navigation mode does not wrap. If six-key mode is enabled, this navigation 
 This is equivalent to pressing tab at fixed intervals. Press enter to select the
 current option.
 
-### audio feedback
-
-#### navigation
-
-This has four levels:
-
-1. On focus (default)
-
- - BLAAC reads each item out when it is focussed.
-
-2. On selection
-
- - BLAAC reads each item out when it is selected.
-
-3. Chimes
-
- - BLAAC plays different chimes for successfully entering a new menu, 
- moving your focus, and 
- going to the top level menu.
-
-4. Off
 
 
+#### On demand
 
+By default, there will be several shortcuts to read out information on where you are.
+
+p - reads out the path from home to your current board
+b - reads out the name of the current board
+t - reads the current time
+i - reads out some key settings, such as whether six key mode is enabled, and lists some essential shortcuts
+
+### Speech
+
+By default, BLAAC says each word as it comes, then pressing enter says the whole sentence.

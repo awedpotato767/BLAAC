@@ -5,7 +5,7 @@ import os
 import tomllib
 from random import choice
 import logging
-from src.tts import fancyTTSOutput, init_audio, terminate_audio
+from src.tts import *
 
 #start logger
 logger = logging.getLogger(__name__)
@@ -26,8 +26,11 @@ with open("config/Global config.toml","rb") as conf_file:
 
 if __name__ == "__main__":
     init_audio()
+    print(get_voices())
     #initialise TTS outputs
-    primary_TTS = fancyTTSOutput()
-    secondary_TTS = fancyTTSOutput()
-    secondary_TTS.say("welcome to B L A A C", volume=0.5)
+    say("welcome to B L A A C", volume=0.5)
+    say("hopefully these two messages overlap")
+    print("test")
+
+    #test code
     terminate_audio()
