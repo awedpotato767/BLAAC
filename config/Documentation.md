@@ -10,36 +10,24 @@ This is currently unimplemented.
 This program handles different voices pretty simply.
 You choose the voice you want to use at any point.
 
-Whenever you try to say something, BLAAC tries the following:
+Whenever you press a button, out of the box, BLAAC tries the following: 
 
-1. play an audio clip in your selected voice
+1. play a random sound file associated with your current voice.
 
-2. read out a TTS message written in your selected voice
+2. say a random TTS message associated with that voice.
 
-3. play an audio clip in your default voice
+4. play the standard sound associated with that button.
 
-4. read a TTS message written for your default voice
+3. say the default vocalisation associated with the button in that voice.
 
-5. play any audio clip
+4. speak the button label in your current voice.
 
-6. read any TTS message in its specified voice
+If you want BLAAC to prioritise the TTS over individual sounds, change the option in the global config for now.
 
-7. read any TTS message in your default voice
+ext_BLAAC_force_voice can be specified at the board or button level to force specific intonation.
+Button voice overrides board voice which overrides chosen voice.
 
-8. use TTS to read out the name of the option
 
-options 7 and 8 are fallback options, so BLAAC will warn you if they are used.
-
-It is possible to specify TTS sentences and audio clips that work in multiple voices.
-
-If you want one option to only be said in specific voices (e.g. you always want
-to say "I am about to have a seizure" in a calm, neutral voice), remove any references
-to other voices in that option's folder.
-
-If you don't specify any voice for an audio clip or TTS message, it will not be
-played if there is any voiced audio or TTS in the folder.
-Audio without a specified voice is supported, because everyone should have the
-ability to make a fart sound on command regardless of their disability. 
 
 #### Adding new voices
 Adding custom voices is a great way to become more expressive with this AAC.
@@ -80,3 +68,78 @@ These cached voices can be found in the chache subdirectory.
 If you make any changes to the audio file, 
 *remember to delete the corresponding .safetensors file in the cache directory*.
 This allows BLAAC to see that you have made a change and react to it.
+
+## usage
+
+### menu navigation
+UNIMPLEMENTED
+
+There are five menu navigation modes by default: coordinates, smart, search, tab navigation
+and scanning.
+
+#### coordinates
+
+Press the character corresponding to which column it is in (left to right), then which row for grid layout boards.
+
+By default, this is 1-9, representing how many items are to the buttons left or above it. 0 counts as 10, - as 11, = as 12.
+
+For six-key input users, there will "qwerty six-key mode" and "hable six-key mode" - where the numerical indeces are replaced with the first letters of the alphabet.
+Qwerty six-key mode is strictly for navigation, it is not enabled while searching or typing sentences.
+
+#### direct
+
+This is not enabled by default, but allows certain keys and key combinations to be permanently mapped to portions of the grid (option configured per board).
+
+#### Search 
+
+This is a stable method of accessing menu items, but is also somewhat slow.
+Only items matching the entered text can be selected, starting with items that 
+start with the search text and sorted alphabetically.
+
+#### Tab navigation
+
+default shortcuts:
+Tab to move one botton to the right. Left to right, then top to bottom.
+Q to move one row down. Top to bottom, then left to right.
+
+Shift plus either reverses direction.
+
+#### W A S D and arrow navigation
+
+W - up
+S - down
+A - left
+D - right
+
+This navigation mode does not wrap. If six-key mode is enabled, this navigation mode is disabled.
+
+
+#### Scanning mode
+
+This is equivalent to pressing tab at fixed intervals. Press enter to select the
+current option.
+
+### audio feedback
+
+#### navigation
+
+This has four levels:
+
+1. On focus (default)
+
+ - BLAAC reads each item out when it is focussed.
+
+2. On selection
+
+ - BLAAC reads each item out when it is selected.
+
+3. Chimes
+
+ - BLAAC plays different chimes for successfully entering a new menu, 
+ moving your focus, and 
+ going to the top level menu.
+
+4. Off
+
+
+

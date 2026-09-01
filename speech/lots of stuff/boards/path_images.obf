@@ -1,0 +1,64 @@
+{
+  "format": "open-board-0.1",
+  "id": "path_images_and_sounds",
+  "locale": "en",
+  "name": "Path Images and Sounds Board",
+  "description_html": "This is an .obf file with images and sounds included as path attributes referenced in the file. It also includes some simple styling.",
+  "grid": {
+    "rows": 2,
+    "columns": 2,
+    "order": [
+      [1, null],
+      [null, 2]
+    ]
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "really happy",
+      "image_id": "9",
+      "sound_id": "ss2",
+      "background_color": "rgb(255, 255, 255)",
+      "border_color": "rgb(150, 150, 150)",
+      "load_board": {
+        "path": "boards/linked_board.obf"
+      }
+    },
+    {
+      "id": 2,
+      "label": "really sad",
+      "image_id": "11",
+      "background_color": "rgb(255, 255, 255)",
+      "border_color": "rgb(150, 150, 150)"
+    }
+  ],
+  "images": [
+    {
+      "id": "9",
+      "width": 300,
+      "height": 300,
+      "path": "images/happy.png",
+      "content_type": "image/png"
+    },
+    {
+      "id": "11",
+      "width": 300,
+      "height": 300,
+      "content_type": "image/png",
+      "path": "images/sad.png",
+      "url": "https://openclipart.org/image/800px/svg_to_png/28768/qubodup_Cubikopp_smilies_11.png",
+      "symbol": {
+        "set": "friends",
+        "filename": "sad.png"
+      }
+    }
+  ],
+  "sounds": [
+    {
+      "id": "ss2",
+      "path": "sounds/sigh.mp3",
+      "duration": 2,
+      "content_type": "audio/mp3"
+    }
+  ]
+}

@@ -27,14 +27,14 @@ I plan for a structure like the following:
 In the root directory, there will be four folders. Config, tts voices, speech and src.
 - Global configuration will be done in config. 
 - tts voices will contain any files used by the TTS system to replicate your desired voices.
-- speech will be where most of the setup time will be. 
- - This is where you set up the menu system and store prerecorded voice samples for direct use.
- - Each folder will contain a file listing any custom shortcuts to subfolders, audio files to be played upon entry to the folder, and/or text to be read by your TTS upon entry to the subfolder.
+- speech contains all of your configured boards.
+- config/presets contains some default board options.
 
 ## What you are allowed to do with this project.
 
 Do what you want. Just don't hurt the disabled community with it or force people to pay to customise their copy of this project.
-
-I want you to be able to create your own voice within this tool, and this is why I have chosen to release it under Creative Commons Attribution-ShareAlike (CC BY-SA).
 I welcome remixing, forking, modifying, changing and otherwise messing around with this code. All I ask is that people get linked back to this document.
 
+To the maximum extent allowed by the law, I am not responsible for what other people do with this code, and I ask that people respect the licenses and wishes of the developers of the dependencies of this project, as they do differ. In particular, pocket-tts. That is the foundation behind the fancy voices you hear. Don't be a dickhead and ruin this technology for the rest of us.
+
+This code is released under the CC BY-SA license. Basically, mention where you got the code from, and don't bundle it into proprietary systems under a more restrictive license.
