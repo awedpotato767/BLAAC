@@ -111,6 +111,7 @@ class audioHandler(pykka.ThreadingActor):
 
         #initialise audio stream TODO
         self.output_device = device_ID
+        self.output_channels = 2
         self._TTS_sample_rate = 24000
         self._output_sample_rate = 48000
         #set transform for upsampling
@@ -132,27 +133,41 @@ class audioHandler(pykka.ThreadingActor):
                 export_model_state(self._TTS_model.get_state_for_audio_prompt(fname),
                                    dirpath.rstirp("/")+"/cache/"+name+".safetensors")
 
+
     def say(self, text, voice="default", volume=1.00):
         #temporary shit version
-        audio = self._transform(self._TTS_model.generate_audio(self._voices[voice], text)\
-                          *volume).numpy()
-        audio = numpy.stack((audio,audio),axis=1)
+        audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text)
+
+
+
         current_frame = 0
         finished=False
         def set_finished():
             nonlocal finished
             finished = True
+
+        buf = self._transform(next(audio_generator)*volume).numpy()
+        if self.output_channels == 2:
+            buf = numpy.stack((buf,buf),axis=1)
         def callback(outdata, frames, time, status):
             nonlocal current_frame
+            nonlocal buf
             if status:
                 print(status)
-            chunksize = min(len(audio) - current_frame, frames)
-            outdata[:chunksize] = audio[current_frame:current_frame + chunksize]
+            chunksize = min(len(buf) - current_frame, frames)
+            outdata[:chunksize] = buf[current_frame:current_frame + chunksize]
             if chunksize < frames:
-                outdata[chunksize:] = 0
-                raise sd.CallbackStop()
+                try:
+                    buf = self._transform(next(audio_generator)*volume).numpy()
+                    if self.output_channels == 2:
+                        buf = numpy.stack((buf,buf),axis=1)
+                    outdata[chunksize:] = buf[:frames-chunksize]
+                    current_frame = frames-2*chunksize
+                except StopIteration:
+                    outdata[chunksize:] = 0
+                    raise sd.CallbackStop()
             current_frame += chunksize
-        stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=2, callback=callback, finished_callback=set_finished)
+        stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
         with stream:
             while not finished:
                 time.sleep(0.1)
@@ -167,8 +182,8 @@ if __name__ == "__main__":
     audio_feedback_proxy = audio_feedback_handler.proxy()
 
     input("start")
-    print(speech_proxy.say("This is speech"))
-    print(audio_feedback_proxy.say("This is audio feedback"))
+    speech_proxy.say("This is speech"))
+    audio_feedback_proxy.say("This is audio feedback")
     input("next input")
 
 
