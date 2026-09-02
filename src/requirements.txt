@@ -3,6 +3,7 @@ annotated-types==0.8.0
 anyio==4.14.2
 beartype==0.22.9
 certifi==2026.7.22
+cffi==2.1.1
 charset-normalizer==3.5.1
 click==8.5.0
 einops==0.8.2
@@ -24,10 +25,11 @@ networkx==3.6.1
 numpy==2.5.2
 packaging==26.3
 pocket-tts==3.0.2
-PyAudio==0.2.14
+pycparser==3.0
 pydantic==2.13.5
 pydantic_core==2.46.5
 Pygments==2.21.0
+pykka==4.4.2
 python-multipart==0.0.32
 PyYAML==6.0.3
 requests==2.34.2
@@ -37,9 +39,11 @@ scipy==1.18.1
 sentencepiece==0.2.2
 setuptools==84.0.0
 shellingham==1.5.4
+sounddevice==0.5.6
 starlette==1.6.0
 sympy==1.14.0
 torch==2.13.0+cpu
+torchaudio==2.11.0+cpu
 tqdm==4.70.0
 typer==0.27.2
 typing-inspection==0.4.4

@@ -25,12 +25,10 @@ with open("config/Global config.toml","rb") as conf_file:
 
 
 if __name__ == "__main__":
-    init_audio()
-    print(get_voices())
+    pyaudio_inst, audio_output_count = init_audio()
     #initialise TTS outputs
     say("welcome to B L A A C", volume=0.5)
-    say("hopefully these two messages overlap")
-    print("test")
+    audio_feedback("hopefully these two messages overlap")
 
     #test code
     terminate_audio()

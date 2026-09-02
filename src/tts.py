@@ -3,10 +3,13 @@ from pocket_tts import TTSModel, export_model_state
 import scipy.io.wavfile
 import os
 import tomllib
-import pyaudio
-import time
 import logging
-import torch.multiprocessing
+import pykka
+
+import sounddevice as sd
+from torchaudio import transforms
+import numpy
+import time
 
 #start logger
 logger = logging.getLogger(__name__)
@@ -20,120 +23,154 @@ try:
 except FileNotFoundError:
     raise FileNotFoundError("Cannot find README.md. Please run this code from the BLAAC root directory.")
 
-#pyaudio setup
-pyaudio_inst = None
-def init_audio():
-    #pyaudio initialisation
-    global pyaudio_inst
-    pyaudio_inst = pyaudio.PyAudio()
-    return pyaudio_inst
-def terminate_audio():
-    pyaudio_inst.terminate()
 
 
 #config file reading
 with open("config/Global config.toml","rb") as conf_file:
     global_config = tomllib.load(conf_file)
 
-#tts initialisation
-__default_voice = None
-__voices = {}
+#                                                             #
+# Actor for TTS generation and wav file output to one device  #
+#                                                             #
 
-__tts_model = TTSModel.load_model(temp=0.6)
+# Attributes
 
-try:
-    __default_voice =\
-        __tts_model.get_state_for_audio_prompt(global_config["tts"]["default_voice"])
-except ImportError:
-    logger.warning(f"Default voice file '{global_config["tts"]["default_voice"]}' is not a WAV or safetensors file. Please make sure this file is present and correct. Continuing with generic voice 'alba'.")
-    __default_voice =\
-        __tts_model.get_state_for_audio_prompt("alba")
+# _TTS_model -> an instance of TTSModel from pocketTTS.
+#             -> Very bulky object. Don't pass around.
+#
+# _voices    -> dict() with keys labelling different voices loaded
+#                 into the model (acts as a cache).
+#             -> values are model states corresponding to each voice
 
+# functions
 
-# needed for multiprocessing
-def __buffer_TTS(text, voice, volume, output_queue):
-            for chunk in __tts_model.generate_audio_stream(__voices[voice], text):
-                output_queue.put(bytes((chunk*volume).numpy()))
+# Init:
+#
+#  actions:
+#    Creates a new instance of pocket-tts' 100k parameter model
+#    Creates _voices
+#    Adds a "default" entry to _voices.
+#
+#  parameters:
+#       Specific to pocket-tts and sounddevice.
+#
+#    device_ID: int or str
+#     - numerical ID of audio output device, or substring of device name
+#     - see sounddevice documentation for more details
+#    voice: string or string file path to a .safetensors
+#     - name or filepath of voice to initialise the TTS with.
+#     - Setting this value to a WAV file will slow down starting each actor
+#    model: String
+#     - which language model to use. highly recommended not to change this.
+#    temp: strictly positive float
+#     - values over 1 are not recommended.
+#     - determines how random the model will be with its expressions
+#    quant: bool
+#     - setting this value to True decreases the audio quality
+#         but marginally improves performance on some devices
+#
+#  errors:
+#    TODO add more suitable error handling. Currently liable to raise ImportError a lot.
 
-#voice initialisation
-def load_voices():
-    voices = {"default": __default_voice}
-    voice_directory_files = os.listdir("TTS voices")
-    precached_files = os.listdir("TTS voices/cache")
+# load_voice_dir:
+#
+#  actions:
+#    attempts to cache all .safetensors voices from the given directory into _voices.
+#
+#  parameters:
+#    dirpath: str
+#      - path to directory to search. Will be relative to the CWD, which should be the project root.
 
-    #cache voices from wav files for future runs
-    for filename in voice_directory_files:
-        name, ext = os.path.splitext(filename)
-
-        #warn for incorrect files
-        if ext != ".safetensors" and ext != ".wav" and ext !="":
-            logger.warning("could not load voice '" + name + "' - invalid file extension" + ext)
-
-        #only cache files without a precached equivalent
-        if ext==".wav" and f"{name}.safetensors" not in voice_directory_files\
-                    and f"{name}.safetensors" not in precached_files:
-            export_model_state(__tts_model.get_state_for_audio_prompt("TTS voices/"+filename),
-                            "TTS voices/cache/"+name+".safetensors")
-
-    #load cached voices
-    for filename in os.listdir("TTS voices/cache"):
-        name,ext = os.path.splitext(filename)
-        if ext==".safetensors":
-            voices[name] = __tts_model.get_state_for_audio_prompt("TTS voices/cache/"+filename)
-    #load precompiled voices in the TTS voices directory
-    #These will take priority over equivalently named chache entries
-    for filename in voice_directory_files:
-        name,ext = os.path.splitext(filename)
-        if ext==".safetensors":
-            voices[name] = __tts_model.get_state_for_audio_prompt("TTS voices/"+filename)
-    return voices
-
-__voices = load_voices()
-
-
-
-def get_voices():
-    return __voices.keys()
-
-def TTS_chunker(byte_count, audio_buffer):
-    # might block forever
-    bufa = audio_buffer.get()
-    i = 0
-    output = bytes()
-    while True:
-        if i+byte_count <= len(bufa):
-            i += byte_count
-            yield bufa[i-byte_count:i]
-        else:
-            if not audio_buffer.empty():
-                output = bufa[i:]
-                i = i+byte_count-len(bufa)
-                bufa = audio_buffer.get()
-                yield b''.join([output,bufa[:i]])
-            else:
-                break
-
-#generate audio
-def callback(in_data, frame_count, time_info, status):
-    global TTS_chunks
-    try:
-        data = next(TTS_chunks)
-    except StopIteration:
-        data = bytes()
-    return (data, pyaudio.paContinue)
+# preprocess_voice_dir:
+#
+#  actions:
+#   Processes all "X.wav"-style files into a corresponding "cache/X.safetensors" file
+#    unless X is present in _voices
+#   NOTE: to reload all chache, simply run this file with an empty _voices dictionary
+#   NOTE 2: For performance reasons, it is advisble to load all voices in dirpath, preprocess, then load again.
+#
+#  parameters:
+#   see load_voice_dir()
 
 
-def say(text, voice="default", volume=1):
-    audio_buffer = torch.multiprocessing.Queue()
+
+class audioHandler(pykka.ThreadingActor):
+    def __init__(self,
+                 device_ID=None,
+                 voice=global_config["tts"]["default_voice"],
+                 model=None, temp=0.5, quant=False):
+        #initialise actor code
+        super().__init__()
+
+        #load TTS
+        self._TTS_model = TTSModel.load_model(language=model, temp=temp, quantize=quant)
+        self._voices = {}
+        #ensure voices dict is nonempty.
+        # TODO gracefully continue on ImportError with suitable warning using default voice "charles"
+        self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(voice)
+
+        #initialise audio stream TODO
+        self.output_device = device_ID
+        self._TTS_sample_rate = 24000
+        self._output_sample_rate = 48000
+        #set transform for upsampling
+        self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
+
+    def load_voice_dir(self, dirpath="TTS voices"):
+        for fname in os.listdir(path):
+            name, ext = os.splitext(fname)
+            # Reload any voices found, except default.
+            if ext == ".safetensors" and name != "default":
+                self._voices=\
+                    self._TTS_model.get_state_for_audio_prompt(fname)
+
+    def preprocess_voice_dir(self, dirpath="TTS voices"):
+        for fname in os.listdir(path):
+            name, ext = os.splitext(fname)
+            # preprocesses every wav file that has not been loaded yet.
+            if ext == ".wav" and name not in self._voices.keys():
+                export_model_state(self._TTS_model.get_state_for_audio_prompt(fname),
+                                   dirpath.rstirp("/")+"/cache/"+name+".safetensors")
+
+    def say(self, text, voice="default", volume=1.00):
+        #temporary shit version
+        audio = self._transform(self._TTS_model.generate_audio(self._voices[voice], text)\
+                          *volume).numpy()
+        audio = numpy.stack((audio,audio),axis=1)
+        current_frame = 0
+        finished=False
+        def set_finished():
+            nonlocal finished
+            finished = True
+        def callback(outdata, frames, time, status):
+            nonlocal current_frame
+            if status:
+                print(status)
+            chunksize = min(len(audio) - current_frame, frames)
+            outdata[:chunksize] = audio[current_frame:current_frame + chunksize]
+            if chunksize < frames:
+                outdata[chunksize:] = 0
+                raise sd.CallbackStop()
+            current_frame += chunksize
+        stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=2, callback=callback, finished_callback=set_finished)
+        with stream:
+            while not finished:
+                time.sleep(0.1)
+        return "finished playing"
 
 
-    TTS_generator = torch.multiprocessing.Process(target=__buffer_TTS, args=(text, voice, volume, audio_buffer))
-    TTS_generator.start()
-    global TTS_chunks
-    TTS_chunks = TTS_chunker(52*4, audio_buffer)
+if __name__ == "__main__":
+    speech_handler = audioHandler.start(device_ID="Ryzen")
+    speech_proxy = speech_handler.proxy()
 
-    stream = pyaudio_inst.open(format=pyaudio.paFloat32, channels=1, rate=24000, stream_callback=callback, output=True)
-    while stream.is_active():
-        time.sleep(0.2)
-    #stream will automatically close when generation has finished
+    audio_feedback_handler = audioHandler.start()
+    audio_feedback_proxy = audio_feedback_handler.proxy()
 
+    input("start")
+    print(speech_proxy.say("This is speech"))
+    print(audio_feedback_proxy.say("This is audio feedback"))
+    input("next input")
+
+
+    sd.wait()
+    pykka.ActorRegistry.stop_all()

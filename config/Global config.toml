@@ -4,4 +4,6 @@ welcome_messages = ["welcome to B L A A C"]
 
 [tts]
 default_voice = 'TTS voices/neutral.safetensors'
+#warning: setting this value above 1 is possible but not recommended.
+expressiveness = 0.6
 prioritise_tts_over_generic_audio = false
