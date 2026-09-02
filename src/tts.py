@@ -98,7 +98,7 @@ class audioHandler(pykka.ThreadingActor):
     def __init__(self,
                  device_ID=None,
                  voice=global_config["tts"]["default_voice"],
-                 model=None, temp=0.5, quant=False):
+                 model=None, temp=0.5, quant=False, usually_interrupt=False):
         #initialise actor code
         super().__init__()
 
@@ -116,6 +116,9 @@ class audioHandler(pykka.ThreadingActor):
         self._output_sample_rate = 48000
         #set transform for upsampling
         self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
+        self._stream = None
+        self._interrupt = False
+        self.usually_interrupt = usually_interrupt
 
     def load_voice_dir(self, dirpath="TTS voices"):
         for fname in os.listdir(path):
@@ -134,16 +137,17 @@ class audioHandler(pykka.ThreadingActor):
                                    dirpath.rstirp("/")+"/cache/"+name+".safetensors")
 
 
-    def say(self, text, voice="default", volume=1.00):
+    def say(self, text, voice="default", volume=1.00, interrupt=None):
+        if interrupt == None:
+            interrupt = self.usually_interrupt
         #temporary shit version
         audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text)
-
-
 
         current_frame = 0
         finished=False
         def set_finished():
             nonlocal finished
+            self._stream = None
             finished = True
 
         buf = self._transform(next(audio_generator)*volume).numpy()
@@ -166,24 +170,35 @@ class audioHandler(pykka.ThreadingActor):
                 except StopIteration:
                     outdata[chunksize:] = 0
                     raise sd.CallbackStop()
+            if self._interrupt:
+                outdata.fill(0)
+                raise sd.CallbackStop()
             current_frame += chunksize
-        stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
-        with stream:
-            while not finished:
-                time.sleep(0.1)
-        return "finished playing"
+
+        #interrupt previous audio
+        self._interrupt=interrupt
+        while self._stream != None:
+            time.sleep(0.1)
+        self._interrupt = False
+
+        self._stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
+        self._stream.start()
+        return "started playing"
 
 
 if __name__ == "__main__":
     speech_handler = audioHandler.start(device_ID="Ryzen")
     speech_proxy = speech_handler.proxy()
 
-    audio_feedback_handler = audioHandler.start()
+    audio_feedback_handler = audioHandler.start(usually_interrupt=True)
     audio_feedback_proxy = audio_feedback_handler.proxy()
 
     input("start")
-    speech_proxy.say("This is speech"))
-    audio_feedback_proxy.say("This is audio feedback")
+    speech_proxy.say("Hopefully this sentence doesn't get interrupted halfway through.")
+    audio_feedback_proxy.say("This is audio feedback that can be interrupted by pressing enter.")
+    speech_proxy.say("This shouldn't interrupt.")
+    input("interrupt button")
+    audio_feedback_proxy.say("BOO!!")
     input("next input")
 
 
