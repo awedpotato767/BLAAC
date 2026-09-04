@@ -1,5 +1,6 @@
 generate first speech (done)
 Set up OBF/OBZ import
 set up OBF/OBZ export
-Create testing ground
-make speech non-blocking
+Create testing UI
+User testing.
+make speech non-blocking (done)
