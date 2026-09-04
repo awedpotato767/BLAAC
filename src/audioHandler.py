@@ -95,6 +95,7 @@ with open("config/Global config.toml","rb") as conf_file:
 
 
 class audioHandler(pykka.ThreadingActor):
+
     def __init__(self,
                  device_ID=None,
                  voice=global_config["tts"]["default_voice"],
@@ -103,13 +104,13 @@ class audioHandler(pykka.ThreadingActor):
         super().__init__()
 
         #load TTS
-        self._TTS_model = TTSModel.load_model(language=model, temp=temp, quantize=quant)
+        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant)
         self._voices = {}
         #ensure voices dict is nonempty.
         # TODO gracefully continue on ImportError with suitable warning using default voice "charles"
         self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(voice)
+        self.current_voice = "default"
 
-        #initialise audio stream TODO
         self.output_device = device_ID
         self.output_channels = 2
         self._TTS_sample_rate = 24000
@@ -119,28 +120,43 @@ class audioHandler(pykka.ThreadingActor):
         self._stream = None
         self._interrupt = False
         self.usually_interrupt = usually_interrupt
+        self.volume = 1.000
 
-    def load_voice_dir(self, dirpath="TTS voices"):
-        for fname in os.listdir(path):
-            name, ext = os.splitext(fname)
+        #load voices
+        self.load_voice_dir()
+        self.preprocess_voice_dir()
+        self.load_voice_dir()
+
+    def load_voice_dir(self, dirpath="TTS voices/"):
+        for fname in os.listdir(dirpath):
+            name, ext = os.path.splitext(fname.lower())
             # Reload any voices found, except default.
             if ext == ".safetensors" and name != "default":
-                self._voices=\
-                    self._TTS_model.get_state_for_audio_prompt(fname)
+                self._voices[name]=\
+                    self._TTS_model.get_state_for_audio_prompt(dirpath+fname)
+        if not dirpath.endswith("cache/"):
+            try:
+                self.load_voice_dir(dirpath+"cache/")
+            except FileNotFoundError:
+                logger.warning("could not load path '"+dirpath+"cache/'")
 
-    def preprocess_voice_dir(self, dirpath="TTS voices"):
-        for fname in os.listdir(path):
-            name, ext = os.splitext(fname)
+    def preprocess_voice_dir(self, dirpath="TTS voices/"):
+        for fname in os.listdir(dirpath):
+            name, ext = os.path.splitext(fname.lower())
             # preprocesses every wav file that has not been loaded yet.
             if ext == ".wav" and name not in self._voices.keys():
-                export_model_state(self._TTS_model.get_state_for_audio_prompt(fname),
-                                   dirpath.rstirp("/")+"/cache/"+name+".safetensors")
+                print("preprocessing "+fname.lower())
+                export_model_state(self._TTS_model.get_state_for_audio_prompt(dirpath+fname),
+                                   dirpath+"cache/"+name+".safetensors")
 
-
-    def say(self, text, voice="default", volume=1.00, interrupt=None):
+    def say(self, text, voice=None, volume=None, interrupt=None):
+        if voice == None:
+            voice = self.current_voice
         if interrupt == None:
             interrupt = self.usually_interrupt
-        #temporary shit version
+        if volume == None:
+            volume = self.volume
+
         audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text)
 
         current_frame = 0
@@ -185,21 +201,29 @@ class audioHandler(pykka.ThreadingActor):
         self._stream.start()
         return "started playing"
 
+    def play(audio, volume = None, interrupt = None):
+        raise NotImplementedError
 
 if __name__ == "__main__":
-    speech_handler = audioHandler.start(device_ID="Ryzen")
+    speech_handler = audioHandler.start(device_ID="Ryzen", temp=0.7)
     speech_proxy = speech_handler.proxy()
 
     audio_feedback_handler = audioHandler.start(usually_interrupt=True)
     audio_feedback_proxy = audio_feedback_handler.proxy()
 
-    input("start")
-    speech_proxy.say("Hopefully this sentence doesn't get interrupted halfway through.")
-    audio_feedback_proxy.say("This is audio feedback that can be interrupted by pressing enter.")
-    speech_proxy.say("This shouldn't interrupt.")
-    input("interrupt button")
-    audio_feedback_proxy.say("BOO!!")
-    input("next input")
+
+    input("initialised")
+    text = " "
+    while text != "/e":
+        text = input()
+        if text.startswith("/v "):
+            audio_feedback_proxy.say("selected voice" +text.removeprefix("/v "), voice = text.removeprefix("/v ")).get()
+            speech_proxy.current_voice = text.removeprefix("/v ")
+        elif text.startswith("/vm "):
+            speech_proxy.volume = float(text.removeprefix("/vm "))
+        else:
+            speech_proxy.say(text, interrupt = True)
+
 
 
     sd.wait()

@@ -1,6 +1,8 @@
 [startup]
 default_board = 'lots of stuff'
-welcome_messages = ["welcome to B L A A C"]
+welcome_messages = ["welcome to B L A A C", "Good luck with your conversation", "you've got this"]
+default_speaker = "ryzen"
+default_headphones="PCM2900C Audio CODEC"
 
 [tts]
 default_voice = 'TTS voices/neutral.safetensors'

@@ -24,11 +24,11 @@ This will be menu based and allow key chording, enabling fast navigation to shor
 There will be a global backup configuration, and the rest will be done through directory structures and text files.
 
 I plan for a structure like the following:
-In the root directory, there will be four folders. Config, tts voices, speech and src.
-- Global configuration will be done in config. 
-- tts voices will contain any files used by the TTS system to replicate your desired voices.
-- speech contains all of your configured boards.
-- config/presets contains some default board options.
+In the root directory, there will be four folders. Config, tts voices, "boards" and src.
+- Global configuration will be done in "config/". 
+- "tts voices/" will contain any files used by the TTS system to replicate your desired voices.
+- "boards/" contains all of your downloaded boards
+- "config/presets/" contains some default board options.
 
 ## What you are allowed to do with this project.
 

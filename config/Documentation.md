@@ -2,6 +2,16 @@
 
 ## configuration
 
+### audio devices
+
+In global config.toml, the options default_speaker and default_headphones determine which devices BLAAC attempts to use upon boot.
+Both are either a numerical ID determining which device is used (not recommended), or a substring of the device name (recommended).
+
+default_speaker is the device that your voice should come out of when the program boots.
+default_headphones is the device that any audio feedback should come through.
+
+If these are set to the same value, both will play from the same device. TODO this needs a better implementation.
+
 ### audio feedback
 Each of these options are found in the global settings document.
 
@@ -9,29 +19,29 @@ Each of these options are found in the global settings document.
 
 This has four levels:
 
-1. On focus (default)
+    1. On focus (default)
 
- - BLAAC reads each item out when it is focussed.
+        - BLAAC reads each item out when it is focussed.
 
-2. On selection
+    2. On selection
 
- - BLAAC reads each item out when it is selected.
+        - BLAAC reads each item out when it is selected.
 
-3. Chimes
+    3. Chimes
 
- - BLAAC plays different chimes for successfully entering a new menu, 
- moving your focus, and 
- going to the top level menu.
+        - BLAAC plays different chimes for successfully entering a new menu, 
+        moving your focus, and 
+        going to the top level menu.
 
-4. Off
+    4. Off
 
 #### typing
 
-1. On space
+    1. On space
 
-2. On keypress
+    2. On keypress
 
-3. Off
+    3. Off
 
 ### voices
 
@@ -43,15 +53,15 @@ You choose the voice you want to use at any point.
 
 Whenever you press a button, out of the box, BLAAC tries the following: 
 
-1. play a random sound file associated with your current voice.
+    1. play a random sound file associated with your current voice.
 
-2. say a random TTS message associated with that voice.
+    2. say a random TTS message associated with that voice.
 
-4. play the standard sound associated with that button.
+    4. play the standard sound associated with that button.
 
-3. say the default vocalisation associated with the button in that voice.
+    3. say the default vocalisation associated with the button in that voice.
 
-4. speak the button label in your current voice.
+    4. speak the button label in your current voice.
 
 If you want BLAAC to prioritise the TTS over individual sounds, change the option in the global config for now.
 
@@ -83,11 +93,11 @@ The voice name is whatever comes before the dot, and should contain only a-z, 0-
 
 For example, if I want to add a nervously excited voice:
 
-1. I try to get myself speaking in the correct mood.
+    1. I try to get myself speaking in the correct mood.
 
-2. I record myself speaking for 30 seconds.
+    2. I record myself speaking for 30 seconds.
 
-3. I save that recording as "nervously excited.wav" in the TTS voices folder.
+    3. I save that recording as "nervously excited.wav" in the TTS voices folder.
 
 Then the next time I start BLAAC, I will be able to select that voice.
 
@@ -171,3 +181,96 @@ i - reads out some key settings, such as whether six key mode is enabled, and li
 ### Speech
 
 By default, BLAAC says each word as it comes, then pressing enter says the whole sentence.
+
+## Techinical details
+
+BLAAC is split into several modules.
+
+    - audioHandler
+    - UI
+    - board management
+ 
+### audioHandler
+
+This actor is the ony thing that touches any audio device. Text and audio data go in, speech and sound come out.
+These actors have a bad habit of failing silently, so if you want to get an error, please use a blocking operation to inspect.
+
+Contains one class:
+
+audioHandler(pykka.ThreadingActor)
+
+Attributes:
+
+    - current_voice
+    - output_device
+    - output_channels (1 or 2)
+    - usually_interrupt - either say everything as soon as the message comes, or wait.
+    - volume
+    
+API:
+
+    - say(text, voice=class default, volume=class defualt, interrupt=class default)
+        - Synthesises a TTS voice and plays it through the class output.
+        - Modifying the defaults is preferred, rather than overriding.
+    - play(audio, volume=class default, interrupt=class default)
+        - if audio is a string, audioHandler will assume it is a filepath and attempt to play that.
+        - if audio is a numpy array, audioHandler will attempt to play it as raw audio through the sounddevice backend.
+    - get_voices()
+        - returns a list of valid voice names.
+    - load_voice_dir(dirpath)
+        - attempts to load all precached voices in a given directory and a cache/ subdirectory if one  exists.
+    - preprocess_voice_dir(dirpath)
+        - attempts to cache any voices that the model has not loaded yet into cache/.
+        
+Use *one* and exactly one instance of this class per audio output. Failing to do so will lead to bad times.
+FIXME
+
+### Board management
+
+This is a three-class module.
+
+class button:
+
+attributes (following the JSON schema closely):
+
+    - image_id
+    - label
+    - vocalisation
+    - ext_BLAAC_force_voice
+    - ext_BLAAC_alternate_vocalisations
+    - sound_id
+    - ext_BLAAC_alternate_sounds
+    - load_board
+    - action
+    - actions
+    - text_color = None - currently unused in the spec
+    - background_color
+    - border_color
+    
+    
+// cannot assume uniquness of IDs outside of the specific board
+
+class board:
+
+attributes:
+
+    - format
+    - id
+    - locale
+    - url
+    - name
+    - description_html
+    - buttons
+    - grid
+    - sounds
+    - images
+    - strings
+    - ext_BLAAC_force_voice
+    
+class manifest:
+
+    - format
+    - root
+    - boards
+    - images
+    - sounds

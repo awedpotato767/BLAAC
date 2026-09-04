@@ -5,7 +5,7 @@ import os
 import tomllib
 from random import choice
 import logging
-from src.tts import *
+from src.audioHandler import *
 
 #start logger
 logger = logging.getLogger(__name__)
@@ -25,10 +25,24 @@ with open("config/Global config.toml","rb") as conf_file:
 
 
 if __name__ == "__main__":
-    pyaudio_inst, audio_output_count = init_audio()
-    #initialise TTS outputs
-    say("welcome to B L A A C", volume=0.5)
-    audio_feedback("hopefully these two messages overlap")
+    #initialise both audio channels
+    speech_handler = audioHandler.start(device_ID=global_config["startup"]["default_speaker"], temp=0.7)
+    speech = speech_handler.proxy()
 
-    #test code
-    terminate_audio()
+    audio_feedback_handler = audioHandler.start(device_ID=global_config["startup"]["default_speaker"], usually_interrupt=True)
+    audio_feedback = audio_feedback_handler.proxy()
+
+    #TODO if audio devices are the same, do this
+    #    audio_feedback = speech
+
+
+    audio_feedback.say(choice(global_config["startup"]["welcome_messages"]), voice="chatty")
+    #audio prompts should have normalised volume
+    speech.say("testing testing 123")
+
+
+
+    time.sleep(10)
+    #gracefully end the code
+    sd.wait()
+    pykka.ActorRegistry.stop_all()
