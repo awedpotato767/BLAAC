@@ -248,7 +248,7 @@ attributes (following the JSON schema closely):
 - border_color
 
 
-// cannot assume uniquness of IDs outside of the specific board
+// cannot assume uniqueness of IDs outside of the specific board
 
 class board:
 
