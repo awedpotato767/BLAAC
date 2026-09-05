@@ -104,11 +104,15 @@ class audioHandler(pykka.ThreadingActor):
         super().__init__()
 
         #load TTS
-        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant)
+        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant, eos_threshold=-4.0)
         self._voices = {}
         #ensure voices dict is nonempty.
         # TODO gracefully continue on ImportError with suitable warning using default voice "charles"
-        self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(voice)
+        try:
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(voice)
+        except FileNotFoundError:
+            logger.warning(f"Cannot find voice file '{voice}', continuing with prepackaged voice charles." )
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt("charles")
         self.current_voice = "default"
 
         self.output_device = device_ID
@@ -148,6 +152,8 @@ class audioHandler(pykka.ThreadingActor):
                 print("preprocessing "+fname.lower())
                 export_model_state(self._TTS_model.get_state_for_audio_prompt(dirpath+fname),
                                    dirpath+"cache/"+name+".safetensors")
+    def get_voices(self):
+        return list(self._voices.keys())
 
     def say(self, text, voice=None, volume=None, interrupt=None):
         if voice == None:
@@ -157,7 +163,7 @@ class audioHandler(pykka.ThreadingActor):
         if volume == None:
             volume = self.volume
 
-        audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text)
+        audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text, frames_after_eos=5)
 
         current_frame = 0
         finished=False

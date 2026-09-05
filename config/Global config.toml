@@ -5,7 +5,7 @@ default_speaker = "ryzen"
 default_headphones="PCM2900C Audio CODEC"
 
 [tts]
-default_voice = 'TTS voices/neutral.safetensors'
+default_voice = 'TTS voices/cache/chatty.safetensors'
 #warning: setting this value above 1 is possible but not recommended.
 expressiveness = 0.6
 prioritise_tts_over_generic_audio = false

@@ -227,25 +227,43 @@ FIXME
 
 ### Board management
 
-This is a three-class module.
+
+fun image_importer: takes an entry from "images" and turns it into something the program understands.
+
+fun sound_importer: likewise for sounds
+
+class obz_manager:
+
+attributes:
+
+- board root
+- dict{"board_ID", board} boards
+- dict{"image_ID", str or np array} images
+- dict{"sound_ID", str or np array} sounds
+
 
 class button:
 
-attributes (following the JSON schema closely):
+suported options in maximal implementation (following the JSON schema closely):
 
+\* indicates optional parameters
+
+- id
 - image_id
 - label
-- vocalisation
-- ext_BLAAC_force_voice
-- ext_BLAAC_alternate_vocalisations
-- sound_id
-- ext_BLAAC_alternate_sounds
-- load_board
-- action
-- actions
-- text_color = None - currently unused in the spec
-- background_color
-- border_color
+- vocalisation \*
+- ext_BLAAC_force_voice \*
+- ext_BLAAC_alternate_vocalisations \*
+- sound_id \*
+- ext_BLAAC_alternate_sounds \*
+- load_board \*
+- actions \*
+- action \* - not used by BLAAC internally. kept for spec compliance.
+- text_color \* - currently unused in the spec
+- background_color \*
+- border_color \*
+
+unhandled ext_ options are stored as their own thing
 
 
 // cannot assume uniqueness of IDs outside of the specific board
@@ -266,11 +284,6 @@ attributes:
 - images
 - strings
 - ext_BLAAC_force_voice
+- unhandled_ext_options
 
-class manifest:
 
-- format
-- root
-- boards
-- images
-- sounds
