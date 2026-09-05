@@ -2,6 +2,7 @@ import json as js
 import os
 import tomllib
 import logging
+import urllib
 
 #start logger
 logger = logging.getLogger(__name__)
@@ -57,10 +58,22 @@ class button:
 class board:
     def __init__(self, path_or_url):
         #TODO support URLs
-        if path_or_url.startswith("http"):
-            raise NotImplementedError
-        with open(path_or_url) as fp:
-            self._data = js.load(fp)
+        match path_or_url:
+            case "http*":
+                with urllib.request.urlopen(path_or_url) as fp:
+                    self._data = js.load(fp)
+                    contents = fp.read()
+                with open(f"{self._boardroot}cache/{self._data["id"]}.obf", "w") as obffile:
+                    obffile.write(contents)
+            case "data*":
+                #this should not happen
+                logger.warning("DATA URL DETECTED FOR BOARD")
+                with urllib.DataHandler.data_open(path_or_url) as fp:
+                    self._data = js.load(fp)
+            case _:
+                #last ditch effort
+                with open(path_or_url) as fp:
+                    self._data = js.load(fp)
 
         self.buttons = {}
         for btn in self._data["buttons"]:
@@ -83,9 +96,10 @@ class board:
         for row in self.grid:
             retval += "\n"
             for btn in row:
+                btn_rep = repr(btn)
                 if btn == None:
-                    btn = "_"
-                retval += f'{repr(btn):<{colwidth}}'
+                    btn_rep = ""
+                retval += f'{btn_rep:<{colwidth}}'
         return retval
 
 

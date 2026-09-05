@@ -27,10 +27,10 @@ with open("config/Global config.toml","rb") as conf_file:
 
 if __name__ == "__main__":
     #initialise both audio channels
-    speech_handler = audioHandler.start(device_ID=global_config["startup"]["default_speaker"], temp=0.7)
+    speech_handler = audioHandler.start(device_ID=global_config["startup"]["default_speaker"], temp=0.7, voice = global_config["tts"]["default_speaking_voice"])
     speech = speech_handler.proxy()
 
-    audio_feedback_handler = audioHandler.start(device_ID=global_config["startup"]["default_headphones"], usually_interrupt=True)
+    audio_feedback_handler = audioHandler.start(device_ID=global_config["startup"]["default_headphones"], voice = global_config["tts"]["default_feedback_voice"], usually_interrupt=True)
     audio_feedback = audio_feedback_handler.proxy()
 
     #TODO if audio devices are the same, do this
@@ -54,7 +54,7 @@ if __name__ == "__main__":
                 audio_feedback.say(selected_btn.vocalisation())
                 AAC_board = obf.board(boards_dir+ selected_btn.loads_board)
             else:
-                speech.say(selected_btn.vocalisation().lstrip(" "))
+                speech.say(selected_btn.vocalisation())
         elif inp in speech.get_voices().get():
             speech.current_voice = inp
             audio_feedback.say("selected voice "+inp)
@@ -64,6 +64,8 @@ if __name__ == "__main__":
                 _voices = _voices + f"{voice}, "
             _voices += f"and {speech.get_voices().get()[-1]}"
             audio_feedback.say(f"the available voices are: {_voices}.")
+        elif inp.startswith("s "):
+            speech.say(inp.removeprefix("s "))
         else:
             audio_feedback.say("Not a command.")
     #gracefully end the code

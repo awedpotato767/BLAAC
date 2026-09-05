@@ -1,5 +1,7 @@
 #ignore voices for privacy reasons
 TTS voices/*
 !TTS voices/.gitkeep
+!TTS voices/news.safetensors
+!TTS voices/magnus.safetensors
 
 .venv/

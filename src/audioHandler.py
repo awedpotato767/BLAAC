@@ -98,7 +98,7 @@ class audioHandler(pykka.ThreadingActor):
 
     def __init__(self,
                  device_ID=None,
-                 voice=global_config["tts"]["default_voice"],
+                 voice=global_config["tts"]["default_speaking_voice"],
                  model=None, temp=0.5, quant=False, usually_interrupt=False):
         #initialise actor code
         super().__init__()
@@ -163,7 +163,19 @@ class audioHandler(pykka.ThreadingActor):
         if volume == None:
             volume = self.volume
 
-        audio_generator = self._TTS_model.generate_audio_stream(self._voices[voice], text, frames_after_eos=5)
+        #preprocess text to ensure it works
+        text = text.lstrip(" ") + "."
+        #fix short words
+        padding = 5
+        if len(text) < 7:
+            padding = 10
+
+        try:
+            voice_state = self._voices[voice]
+        except KeyError:
+            voice_state = self._TTS_model.get_state_for_audio_prompt(voice)
+            self._voices[voice] = voice_state
+        audio_generator = self._TTS_model.generate_audio_stream(voice_state, text, frames_after_eos=padding)
 
         current_frame = 0
         finished=False
@@ -209,28 +221,3 @@ class audioHandler(pykka.ThreadingActor):
 
     def play(audio, volume = None, interrupt = None):
         raise NotImplementedError
-
-if __name__ == "__main__":
-    speech_handler = audioHandler.start(device_ID="Ryzen", temp=0.7)
-    speech_proxy = speech_handler.proxy()
-
-    audio_feedback_handler = audioHandler.start(usually_interrupt=True)
-    audio_feedback_proxy = audio_feedback_handler.proxy()
-
-
-    input("initialised")
-    text = " "
-    while text != "/e":
-        text = input()
-        if text.startswith("/v "):
-            audio_feedback_proxy.say("selected voice" +text.removeprefix("/v "), voice = text.removeprefix("/v ")).get()
-            speech_proxy.current_voice = text.removeprefix("/v ")
-        elif text.startswith("/vm "):
-            speech_proxy.volume = float(text.removeprefix("/vm "))
-        else:
-            speech_proxy.say(text, interrupt = True)
-
-
-
-    sd.wait()
-    pykka.ActorRegistry.stop_all()
