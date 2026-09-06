@@ -40,11 +40,16 @@ if __name__ == "__main__":
     print(audio_feedback.say(choice(global_config["startup"]["welcome_messages"]), voice="chatty").get())
 
     #test code
-    AAC_board = obf.board("Boards/communikate-20/board_1_235.obf")
-    boards_dir = "Boards/communikate-20/"
+    if f"{global_config["boards"]["home_board"]}.obf" not in os.listdir("Boards/"):
+        boards_dir = f"Boards/{global_config["boards"]["home_board"]}/"
+        #FIXME add error handling
+        with open(boards_dir+"manifest.json") as mff:
+            # obf.load_manifest(mff)
+            pass
+        AAC_board = obf.board("Boards/quick-core-60/board_1_416.obf")
 
     inp = " "
-    while inp != "":
+    while inp != "q":
         print(AAC_board)
         inp = str(input(":"))
 

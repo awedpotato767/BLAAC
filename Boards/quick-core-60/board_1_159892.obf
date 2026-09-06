@@ -1,0 +1,517 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "steeple",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554259_899bd7929f5b1e661eb022b7"
+    },
+    {
+      "id": 2,
+      "label": "north pole",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554265_d28e0cdc6f6ec75ba255f793"
+    },
+    {
+      "id": 3,
+      "label": "landmark",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554258_7168b62619ea1487f77c0db4"
+    },
+    {
+      "id": 4,
+      "label": "tower",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554260_9dbda072ac1e2399c83ab84d"
+    },
+    {
+      "id": 5,
+      "label": "Statue of Liberty",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554267_b562122a3e9147cdfc8d84ef"
+    },
+    {
+      "id": 6,
+      "label": "White House",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554269_be52283df62badd9de140c44"
+    },
+    {
+      "id": 7,
+      "label": "national park",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554262_29bc42aa1768219fcdd907ab"
+    },
+    {
+      "id": 8,
+      "label": "Mount Everest",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554270_acf33518ae9052c4855d08d0"
+    },
+    {
+      "id": 9,
+      "label": "Great Wall of China",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554271_18bf19c6e936f7ad138c5f86"
+    },
+    {
+      "id": 10,
+      "label": "Pyramids of Giza",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554272_3fe1cc9a8d67cde070c7885a"
+    },
+    {
+      "id": 11,
+      "label": "Great Barrier Reef",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554273_933a55ae10c6847d3066bab3"
+    },
+    {
+      "id": 12,
+      "label": "national forest",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554263_e7254ff78876c76b05fa9e07"
+    },
+    {
+      "id": 13,
+      "label": "Grand Canyon",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554275_04110243b310d38c9176e474"
+    },
+    {
+      "id": 14,
+      "label": "Central Park",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554276_a217a6b4b196eb4cea8ef41f"
+    },
+    {
+      "id": 15,
+      "label": "ranger station",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554264_bfff8c0faad56e6c4bf85725"
+    },
+    {
+      "id": 16,
+      "label": "south pole",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554266_735562e0d683be16e6168298"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        null,
+        1,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        3,
+        4,
+        null,
+        5,
+        6,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        7,
+        null,
+        null,
+        8,
+        9,
+        10,
+        11,
+        null,
+        null,
+        null
+      ],
+      [
+        12,
+        null,
+        null,
+        13,
+        14,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        15,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        16,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_554259_899bd7929f5b1e661eb022b7",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://en.wikipedia.org/wiki/Public_domain",
+        "source_url": "http://thenounproject.com/term/tower/",
+        "author_name": "Kenneth Appiah",
+        "author_url": "http://thenounproject.com/kenset",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Tower-ce959f7d75.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554259_899bd7929f5b1e661eb022b7",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554259_899bd7929f5b1e661eb022b7.svg"
+    },
+    {
+      "id": "1_554265_d28e0cdc6f6ec75ba255f793",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/North Pole.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554265_d28e0cdc6f6ec75ba255f793",
+      "content_type": "image/png",
+      "path": "images/image_1_554265_d28e0cdc6f6ec75ba255f793.png"
+    },
+    {
+      "id": "1_554258_7168b62619ea1487f77c0db4",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Stock Image Folio",
+        "author_url": "http://thenounproject.com/stockimagefolio",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Stones_496_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554258_7168b62619ea1487f77c0db4",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554258_7168b62619ea1487f77c0db4.svg"
+    },
+    {
+      "id": "1_554260_9dbda072ac1e2399c83ab84d",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/tower/",
+        "author_name": "Evgeny Katz",
+        "author_url": "http://thenounproject.com/evgenkatz",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Tower-6985635036.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554260_9dbda072ac1e2399c83ab84d",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554260_9dbda072ac1e2399c83ab84d.svg"
+    },
+    {
+      "id": "1_554267_b562122a3e9147cdfc8d84ef",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Statue of Liberty.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554267_b562122a3e9147cdfc8d84ef",
+      "content_type": "image/png",
+      "path": "images/image_1_554267_b562122a3e9147cdfc8d84ef.png"
+    },
+    {
+      "id": "1_554269_be52283df62badd9de140c44",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/8d3de061-d51f-4c02-a195-d738336e3638.svg",
+        "author_name": "bradee evans",
+        "author_url": "http://thenounproject.com/bradee",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Tree-def1f85edd.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554269_be52283df62badd9de140c44",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554269_be52283df62badd9de140c44.svg"
+    },
+    {
+      "id": "1_554262_29bc42aa1768219fcdd907ab",
+      "width": 283,
+      "height": 283,
+      "license": {
+        "type": "CC BY-NC",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc/2.0/",
+        "author_name": "Sclera",
+        "author_url": "http://www.sclera.be/en/picto/copyright",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/sclera/national day_2.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554262_29bc42aa1768219fcdd907ab",
+      "content_type": "image/png",
+      "path": "images/image_1_554262_29bc42aa1768219fcdd907ab.png"
+    },
+    {
+      "id": "1_554270_acf33518ae9052c4855d08d0",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/mountain.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554270_acf33518ae9052c4855d08d0",
+      "content_type": "image/png",
+      "path": "images/image_1_554270_acf33518ae9052c4855d08d0.png"
+    },
+    {
+      "id": "1_554271_18bf19c6e936f7ad138c5f86",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Chinese Wall.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554271_18bf19c6e936f7ad138c5f86",
+      "content_type": "image/png",
+      "path": "images/image_1_554271_18bf19c6e936f7ad138c5f86.png"
+    },
+    {
+      "id": "1_554272_3fe1cc9a8d67cde070c7885a",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Hea Poh Lin",
+        "author_url": "http://thenounproject.com/charlenehea",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Pyramid-of-Giza_627_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554272_3fe1cc9a8d67cde070c7885a",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554272_3fe1cc9a8d67cde070c7885a.svg"
+    },
+    {
+      "id": "1_554273_933a55ae10c6847d3066bab3",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Tyler Glaude",
+        "author_url": "http://thenounproject.com/tyler.glaude",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/barrier_285_136215.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554273_933a55ae10c6847d3066bab3",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554273_933a55ae10c6847d3066bab3.svg"
+    },
+    {
+      "id": "1_554263_e7254ff78876c76b05fa9e07",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Danil Polshin",
+        "author_url": "http://thenounproject.com/everydaytemplate",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/national-flag_967_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554263_e7254ff78876c76b05fa9e07",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554263_e7254ff78876c76b05fa9e07.svg"
+    },
+    {
+      "id": "1_554275_04110243b310d38c9176e474",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Valley.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554275_04110243b310d38c9176e474",
+      "content_type": "image/png",
+      "path": "images/image_1_554275_04110243b310d38c9176e474.png"
+    },
+    {
+      "id": "1_554276_a217a6b4b196eb4cea8ef41f",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/flag Central African Republic.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554276_a217a6b4b196eb4cea8ef41f",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554276_a217a6b4b196eb4cea8ef41f.svg"
+    },
+    {
+      "id": "1_554264_bfff8c0faad56e6c4bf85725",
+      "width": 92,
+      "height": 100,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/44_2.svg",
+        "author_name": "Unknown Designer",
+        "author_url": "http://thenounproject.com/http://thenounproject.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Ranger Station-5acfed047d.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554264_bfff8c0faad56e6c4bf85725",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554264_bfff8c0faad56e6c4bf85725.svg"
+    },
+    {
+      "id": "1_554266_735562e0d683be16e6168298",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/south pole.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554266_735562e0d683be16e6168298",
+      "content_type": "image/png",
+      "path": "images/image_1_554266_735562e0d683be16e6168298.png"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_159892",
+  "locale": "en",
+  "name": "Core 60 - Landmarks",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-landmarks",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-landmarks",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://s3.amazonaws.com/opensymbols/libraries/arasaac/board_3.png",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-landmarks",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": null,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": null
+  }
+}

@@ -102,5 +102,8 @@ class board:
                 retval += f'{btn_rep:<{colwidth}}'
         return retval
 
+def load_obz(dirpath):
+    raise NotImplementedError
+    return root_board
 
 

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="Captions">
+	<rect x="-192" width="185" height="99"/>
+	<rect y="-36" width="100" height="30"/>
+	<text transform="matrix(1 0 0 1 66 -19.5005)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">http://thenounproject.com</text>
+	<text transform="matrix(1 0 0 1 7.166 -24.5005)" font-family="'HelveticaRoundedLT-Bold'" font-size="6.1578">The Noun Project</text>
+	<text transform="matrix(1 0 0 1 8.2861 -19.6997)" font-family="'HelveticaRoundedLT-Bold'" font-size="4">Icon Template</text>
+	<text transform="matrix(1 0 0 1 -178.5 10.4995)" font-family="'HelveticaRoundedLT-Bold'" font-size="6.1578">Reminders</text>
+	<line fill="#000000" stroke="#FFFFFF" stroke-miterlimit="10" x1="8" y1="-14.5" x2="18" y2="-14.5"/>
+	<line fill="#000000" stroke="#FFFFFF" stroke-miterlimit="10" x1="-179" y1="16.5" x2="-162" y2="16.5"/>
+	<g>
+		<g>
+			<g>
+				<rect x="-170.802" y="31.318" width="8.721" height="8.642"/>
+				<path d="M-164.455,42.312h4.747v-4.703h-4.747V42.312z M-159.266,42.749h-5.63V37.17h5.63V42.749L-159.266,42.749z       M-166.221,44.062h8.279v-8.203h-8.279V44.062L-166.221,44.062z M-157.5,44.5h-9.163v-9.079h9.163V44.5L-157.5,44.5z"/>
+				<polygon points="-166.149,44.133 -166.292,43.991 -158.013,35.787 -157.871,35.929     "/>
+			</g>
+		</g>
+	</g>
+	<rect x="-179" y="58" fill="none" width="35" height="32.5"/>
+	<text transform="matrix(1 0 0 1 -179 60.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="3">Strokes</text>
+	<text transform="matrix(1 0 0 1 -179 65.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Try to keep strokes at 4px</text>
+	<text transform="matrix(1 0 0 1 -179 70.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Minimum stroke weight is 2px</text>
+	<text transform="matrix(1 0 0 1 -179 74.6563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">For thicker strokes use even </text>
+	<text transform="matrix(1 0 0 1 -179 77.6563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">numbers: 6px, 8px etc.</text>
+	<text transform="matrix(1 0 0 1 -179 82.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Remember to expand strokes </text>
+	<text transform="matrix(1 0 0 1 -179 85.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">before saving as an SVG </text>
+	<rect x="-136.5" y="58" fill="none" width="35" height="32.5"/>
+	<text transform="matrix(1 0 0 1 -136.5 60.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="3">Size</text>
+	<text transform="matrix(1 0 0 1 -136.5 65.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Cannot be wider or taller than </text>
+	<text transform="matrix(1 0 0 1 -136.5 68.6563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">100px (artboard size)</text>
+	<text transform="matrix(1 0 0 1 -136.5 73.6563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Scale your icon to fill as much of </text>
+	<text transform="matrix(1 0 0 1 -136.5 76.6563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">the artboard as possible</text>
+	<rect x="-94" y="58" fill="none" width="35" height="32.5"/>
+	<text transform="matrix(1 0 0 1 -94 60.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="3">Ungroup</text>
+	<text transform="matrix(1 0 0 1 -94 65.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">If your design has more than one </text>
+	<text transform="matrix(1 0 0 1 -94 68.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">shape, make sure to ungroup</text>
+	<rect x="-50" y="58" fill="none" width="35" height="32.5"/>
+	<text transform="matrix(1 0 0 1 -50 60.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="3">Save as</text>
+	<text transform="matrix(1 0 0 1 -50 65.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">Save as .SVG and make sure </text>
+	<text transform="matrix(1 0 0 1 -50 68.1563)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.4">&#8220;Use Artboards&#8221; is checked</text>
+	<text transform="matrix(1.0074 0 0 1 -125.542 30.5933)" font-family="'HelveticaRoundedLT-Bold'" font-size="2.5731">100px</text>
+	<text transform="matrix(1.0074 0 0 1 -41 38.9995)" font-family="'HelveticaRoundedLT-Bold'" font-size="5.1462">.SVG</text>
+	<rect x="-126.514" y="34.815" width="10.261" height="10.185"/>
+	<rect x="-126.477" y="31.766" width="0.522" height="2.337"/>
+	<rect x="-116.812" y="31.766" width="0.523" height="2.337"/>
+	<rect x="-127" y="32.337" width="11.233" height="0.572"/>
+	<g>
+		<rect x="-83.805" y="33.844" width="10.305" height="10.156"/>
+		<rect x="-76.809" y="28.707" width="3.308" height="3.261"/>
+	</g>
+	<rect x="-178.5" y="22.5" stroke="#FFFFFF" stroke-miterlimit="10" width="30" height="30" fill="#000000"/>
+	<rect x="-136.5" y="22.5" stroke="#FFFFFF" stroke-miterlimit="10" width="30" height="30" fill="#000000"/>
+	<rect x="-93.5" y="22.5" stroke="#FFFFFF" stroke-miterlimit="10" width="30" height="30" fill="#000000"/>
+	<rect x="-49.5" y="22.5" stroke="#FFFFFF" stroke-miterlimit="10" width="30" height="30" fill="#000000"/>
+</g>
+<g>
+	<g>
+		<path d="M49.946,17.395"/>
+		<path d="M49.944,6.356c-1.424,0-2.576-1.147-2.576-2.574c-0.001-1.42,1.152-2.578,2.576-2.578s2.577,1.158,2.577,2.578    C52.521,5.209,51.368,6.356,49.944,6.356z"/>
+		<polygon points="52.887,11.026 59.251,1.602 58.23,1.164 52.212,7.39 50.004,7.39 49.998,7.39 47.791,7.39 41.771,1.164     40.751,1.602 47.114,11.026 47.067,17.411 45.201,32.946 46.95,32.946 50.001,20.032 53.053,32.946 54.801,32.946 52.935,17.411       "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M50.058,82.604"/>
+		<path d="M50.058,93.644c1.421,0,2.576,1.147,2.576,2.573c0,1.42-1.153,2.58-2.576,2.58c-1.427,0-2.579-1.16-2.579-2.58    C47.479,94.791,48.631,93.644,50.058,93.644z"/>
+		<polygon points="47.114,88.973 40.751,98.396 41.771,98.837 47.791,92.61 49.998,92.61 50.004,92.61 52.212,92.61 58.23,98.837     59.251,98.396 52.887,88.973 52.935,82.588 54.801,67.053 53.053,67.053 50.001,79.969 46.95,67.053 45.201,67.053 47.067,82.588       "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M26.906,26.984"/>
+		<path d="M19.101,19.181c-1.006,1.005-2.634,1.009-3.643,0c-1.005-1.004-1.008-2.638-0.002-3.645c1.009-1.009,2.644-1.005,3.647,0    C20.111,16.545,20.108,18.172,19.101,19.181z"/>
+		<polygon points="24.483,20.399 22.318,9.236 21.287,9.648 21.433,18.307 19.872,19.868 19.868,19.871 18.308,21.432 9.649,21.286     9.236,22.317 20.4,24.482 24.883,29.031 34.548,41.337 35.784,40.1 28.811,28.809 40.1,35.783 41.337,34.547 29.032,24.882   "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M73.095,73.017"/>
+		<path d="M80.898,80.819c1.008-1.005,2.636-1.01,3.645-0.002c1.005,1.006,1.007,2.641,0.002,3.647    c-1.009,1.006-2.643,1.003-3.648-0.002C79.888,83.456,79.892,81.828,80.898,80.819z"/>
+		<polygon points="75.517,79.6 77.682,90.763 78.715,90.352 78.568,81.693 80.128,80.133 80.132,80.129 81.693,78.567     90.354,78.714 90.762,77.683 79.6,75.518 75.116,70.968 65.452,58.665 64.215,59.901 71.19,71.189 59.9,64.216 58.665,65.453     70.968,75.117   "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M17.395,50.056"/>
+		<path d="M6.357,50.058c0,1.422-1.148,2.575-2.574,2.575c-1.421,0.001-2.579-1.153-2.578-2.575c0-1.427,1.157-2.58,2.578-2.58    C5.209,47.478,6.357,48.631,6.357,50.058z"/>
+		<polygon points="11.026,47.113 1.603,40.75 1.164,41.771 7.39,47.789 7.39,49.998 7.39,50.003 7.39,52.21 1.164,58.229     1.603,59.249 11.026,52.888 17.411,52.934 32.947,54.8 32.947,53.05 20.032,49.999 32.947,46.949 32.947,45.201 17.412,47.066       "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M82.604,49.945"/>
+		<path d="M93.641,49.943c0.002-1.423,1.149-2.577,2.575-2.576c1.421-0.001,2.581,1.152,2.581,2.576c0,1.425-1.16,2.578-2.581,2.578    C94.79,52.521,93.643,51.368,93.641,49.943z"/>
+		<polygon points="88.974,52.888 98.398,59.249 98.837,58.229 92.611,52.21 92.611,50.003 92.611,49.998 92.611,47.79     98.837,41.771 98.398,40.75 88.974,47.113 82.587,47.066 67.052,45.201 67.052,46.949 79.968,49.999 67.052,53.05 67.052,54.8     82.587,52.934   "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M26.984,73.096"/>
+		<path d="M19.181,80.899c1.005,1.007,1.01,2.636,0.001,3.644c-1.004,1.004-2.639,1.008-3.646,0.001    c-1.008-1.008-1.005-2.642,0-3.647C16.545,79.888,18.172,79.893,19.181,80.899z"/>
+		<polygon points="20.399,75.518 9.236,77.683 9.649,78.714 18.307,78.567 19.868,80.129 19.872,80.133 21.432,81.692     21.287,90.352 22.318,90.763 24.482,79.6 29.031,75.117 41.337,65.453 40.1,64.216 28.809,71.191 35.784,59.901 34.548,58.665     24.882,70.968   "/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M73.017,26.905"/>
+		<path d="M80.818,19.1c-1.005-1.005-1.009-2.634,0-3.642c1.004-1.006,2.64-1.009,3.646-0.002c1.007,1.009,1.003,2.644,0,3.647    C83.456,20.111,81.828,20.107,80.818,19.1z"/>
+		<polygon points="79.6,24.482 90.762,22.318 90.352,21.286 81.693,21.433 80.132,19.871 80.128,19.868 78.568,18.307 78.715,9.648     77.682,9.236 75.517,20.399 70.968,24.883 58.665,34.548 59.9,35.783 71.19,28.811 64.215,40.1 65.452,41.337 75.116,29.031   "/>
+	</g>
+</g>
+</svg>

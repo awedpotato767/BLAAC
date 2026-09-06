@@ -1,0 +1,432 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": "q",
+      "label": "q",
+      "action": "+q",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "w",
+      "label": "w",
+      "action": "+w",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "e",
+      "label": "e",
+      "action": "+e",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "r",
+      "label": "r",
+      "action": "+r",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "t",
+      "label": "t",
+      "action": "+t",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "y",
+      "label": "y",
+      "action": "+y",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "u",
+      "label": "u",
+      "action": "+u",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "i",
+      "label": "i",
+      "action": "+i",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "o",
+      "label": "o",
+      "action": "+o",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "p",
+      "label": "p",
+      "action": "+p",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "a",
+      "label": "a",
+      "action": "+a",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "s",
+      "label": "s",
+      "action": "+s",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "d",
+      "label": "d",
+      "action": "+d",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "f",
+      "label": "f",
+      "action": "+f",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "g",
+      "label": "g",
+      "action": "+g",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "h",
+      "label": "h",
+      "action": "+h",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "j",
+      "label": "j",
+      "action": "+j",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "k",
+      "label": "k",
+      "action": "+k",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "l",
+      "label": "l",
+      "action": "+l",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "num2",
+      "label": "numbers",
+      "border_color": "rgb(204, 204, 204)",
+      "background_color": "rgb(255, 255, 255)",
+      "load_board": {
+        "id": "1_2255",
+        "url": "https://app.mycoughdrop.com/example/numbers",
+        "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/numbers",
+        "path": "board_1_2255.obf"
+      },
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_17981_d39ccd79ce92512f3caf731d"
+    },
+    {
+      "id": "sp1",
+      "label": " shift",
+      "action": ":shift",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_4440187_9abcc0382c31c8997801e539"
+    },
+    {
+      "id": "z",
+      "label": "z",
+      "action": "+z",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "x",
+      "label": "x",
+      "action": "+x",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "c",
+      "label": "c",
+      "action": "+c",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "v",
+      "label": "v",
+      "action": "+v",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "b",
+      "label": "b",
+      "action": "+b",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "n",
+      "label": "n",
+      "action": "+n",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "m",
+      "label": "m",
+      "action": "+m",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_hide_label": true
+    },
+    {
+      "id": "sp2",
+      "label": "space",
+      "action": ":space",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_17983_0231d7458b106cd5430f1893"
+    },
+    {
+      "id": 1,
+      "label": "emoji",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "load_board": {
+        "id": "1_431792",
+        "url": "https://app.mycoughdrop.com/example/emoji",
+        "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/emoji",
+        "path": "board_1_431792.obf"
+      },
+      "hidden": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_1259817_8ae5864efdcc4241158b3c9b"
+    }
+  ],
+  "grid": {
+    "rows": 3,
+    "columns": 10,
+    "order": [
+      [
+        "q",
+        "w",
+        "e",
+        "r",
+        "t",
+        "y",
+        "u",
+        "i",
+        "o",
+        "p"
+      ],
+      [
+        "a",
+        "s",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "num2"
+      ],
+      [
+        "sp1",
+        "z",
+        "x",
+        "c",
+        "v",
+        "b",
+        "n",
+        "m",
+        "sp2",
+        1
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_17981_d39ccd79ce92512f3caf731d",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/numbers_9.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_17981_d39ccd79ce92512f3caf731d",
+      "content_type": "image/png",
+      "path": "images/image_1_17981_d39ccd79ce92512f3caf731d.png"
+    },
+    {
+      "id": "1_4440187_9abcc0382c31c8997801e539",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/32055143-64f1-4826-b467-b76558f927f9.svg",
+        "author_name": "P.J. Onori",
+        "author_url": "http://thenounproject.com/somerandomdude",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Arrow-3db1d7d9e3.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4440187_9abcc0382c31c8997801e539",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4440187_9abcc0382c31c8997801e539.svg"
+    },
+    {
+      "id": "1_17983_0231d7458b106cd5430f1893",
+      "width": 467,
+      "height": 467,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/4.0/",
+        "author_name": "CoughDrop",
+        "author_url": "https://www.mycoughdrop.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/coughdrop_symbols/space.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_17983_0231d7458b106cd5430f1893",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_17983_0231d7458b106cd5430f1893.svg"
+    },
+    {
+      "id": "1_1259817_8ae5864efdcc4241158b3c9b",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f604.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f604.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259817_8ae5864efdcc4241158b3c9b",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259817_8ae5864efdcc4241158b3c9b.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_58",
+  "locale": "en",
+  "name": "Keyboard",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/keyboard",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/keyboard",
+  "label_locale": "en",
+  "vocalization_locale": "en",
+  "description_html": "Keyboard with word completion and word prediction, including numbers.",
+  "ext_coughdrop_image_url": "https://d18vdu4p71yql0.cloudfront.net/libraries/icomoon/keyboard.svg",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/keyboard",
+    "word_suggestions": true,
+    "protected": false,
+    "home_board": true,
+    "categories": [
+      "keyboards"
+    ],
+    "text_only": null,
+    "hide_empty": false
+  }
+}

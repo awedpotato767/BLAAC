@@ -1,0 +1,164 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "[work people]",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_4439940_fb368291ec23505283fd21d6"
+    },
+    {
+      "id": 2,
+      "label": "employee",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_4439937_783a271b5ba94660cf33a0ab"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_4439940_fb368291ec23505283fd21d6",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Pundimon",
+        "author_url": "http://thenounproject.com/pundimon",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/more_169_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439940_fb368291ec23505283fd21d6",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439940_fb368291ec23505283fd21d6.svg"
+    },
+    {
+      "id": "1_4439937_783a271b5ba94660cf33a0ab",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Rockicon",
+        "author_url": "http://thenounproject.com/rockicon",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Employee_797_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439937_783a271b5ba94660cf33a0ab",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439937_783a271b5ba94660cf33a0ab.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_2000996",
+  "locale": "en",
+  "name": "Core 60 - Employee",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-employee",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-employee",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Employee_797_g.svg",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-employee",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": false,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": false
+  }
+}

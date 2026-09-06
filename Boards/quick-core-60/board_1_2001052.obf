@@ -1,0 +1,190 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "[my songs]",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_4439991_de26b6151d46e876f7698bd8"
+    },
+    {
+      "id": 2,
+      "label": "[my artists]",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_4439992_221cf73e179d04a9c1cc496a"
+    },
+    {
+      "id": 3,
+      "label": "playlist",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_4439988_6a752736f913b998ad93bf25"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_4439991_de26b6151d46e876f7698bd8",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Pundimon",
+        "author_url": "http://thenounproject.com/pundimon",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/more_169_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439991_de26b6151d46e876f7698bd8",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439991_de26b6151d46e876f7698bd8.svg"
+    },
+    {
+      "id": "1_4439992_221cf73e179d04a9c1cc496a",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Pundimon",
+        "author_url": "http://thenounproject.com/pundimon",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/more_169_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439992_221cf73e179d04a9c1cc496a",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439992_221cf73e179d04a9c1cc496a.svg"
+    },
+    {
+      "id": "1_4439988_6a752736f913b998ad93bf25",
+      "width": 100,
+      "height": 50,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/e6d8883f-13af-4e5c-b729-c3493c0f4cd6.svg",
+        "author_name": "Thomas Grollier",
+        "author_url": "http://thenounproject.com/thomas.grollier",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Music-bdaa0e12a2.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439988_6a752736f913b998ad93bf25",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439988_6a752736f913b998ad93bf25.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_2001052",
+  "locale": "en",
+  "name": "Core 60 - Playlist",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-playlist",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-playlist",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/apple-core_9817_noun_project_9817_1.svg",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-playlist",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": false,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": false
+  }
+}

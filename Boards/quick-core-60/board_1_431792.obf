@@ -1,0 +1,571 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "😂",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259818_2966cbeaf7d014acc1fa0909"
+    },
+    {
+      "id": 2,
+      "label": "😭",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259822_db0b6c6a8a60c082b6a951d7"
+    },
+    {
+      "id": 3,
+      "label": "😍",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259821_b589ca359dd9ed90f60aaf70"
+    },
+    {
+      "id": 4,
+      "label": "❤️",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259820_3bbc2996c20a83c67db83eb3"
+    },
+    {
+      "id": 5,
+      "label": "👉",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259823_ef0f3ebee452c810fa5c55a1"
+    },
+    {
+      "id": 6,
+      "label": "💜",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259824_68513c0a4d389053de4df49e"
+    },
+    {
+      "id": 7,
+      "label": "💕",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259825_2603b4c48535d9770b8835dc"
+    },
+    {
+      "id": 8,
+      "label": "😊",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259826_0d95006e953171d0dd43daa3"
+    },
+    {
+      "id": 9,
+      "label": "🤔",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259827_b82c18c922b50746e874f540"
+    },
+    {
+      "id": 10,
+      "label": "🙏",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259830_c8b53bf420105d2b08bc562c"
+    },
+    {
+      "id": 11,
+      "label": "💯",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259831_588d7091e3ac4181cd63216a"
+    },
+    {
+      "id": 12,
+      "label": "🔥",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259832_5bf46c8bd6163dd955324405"
+    },
+    {
+      "id": 13,
+      "label": "👀",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259833_41a16cdb7427302ca9e1c996"
+    },
+    {
+      "id": 14,
+      "label": "😘",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259835_802e3dea01cf2cf5c1516433"
+    },
+    {
+      "id": 15,
+      "label": "😎",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259836_952497cfe005f75103e86e10"
+    },
+    {
+      "id": 16,
+      "label": "😩",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259837_1a1a2635d3ac688dc1577ad4"
+    },
+    {
+      "id": 17,
+      "label": "🤨",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259838_fa99d8fde6c6224fa8ed0dde"
+    },
+    {
+      "id": 18,
+      "label": "😡",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259839_f40b17be803fbe5c639d7c1c"
+    },
+    {
+      "id": 19,
+      "label": "🤮",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_hide_label": true,
+      "image_id": "1_1259840_182f6f58a36145edcb249a1b"
+    }
+  ],
+  "grid": {
+    "rows": 3,
+    "columns": 10,
+    "order": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_1259818_2966cbeaf7d014acc1fa0909",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f602.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f602.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259818_2966cbeaf7d014acc1fa0909",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259818_2966cbeaf7d014acc1fa0909.svg"
+    },
+    {
+      "id": "1_1259822_db0b6c6a8a60c082b6a951d7",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f62d.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f62d.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259822_db0b6c6a8a60c082b6a951d7",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259822_db0b6c6a8a60c082b6a951d7.svg"
+    },
+    {
+      "id": "1_1259821_b589ca359dd9ed90f60aaf70",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f60d.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f60d.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259821_b589ca359dd9ed90f60aaf70",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259821_b589ca359dd9ed90f60aaf70.svg"
+    },
+    {
+      "id": "1_1259820_3bbc2996c20a83c67db83eb3",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/2764.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/2764.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259820_3bbc2996c20a83c67db83eb3",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259820_3bbc2996c20a83c67db83eb3.svg"
+    },
+    {
+      "id": "1_1259823_ef0f3ebee452c810fa5c55a1",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f449.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f449-varxxxUNI.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259823_ef0f3ebee452c810fa5c55a1",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259823_ef0f3ebee452c810fa5c55a1.svg"
+    },
+    {
+      "id": "1_1259824_68513c0a4d389053de4df49e",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f49c.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f49c.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259824_68513c0a4d389053de4df49e",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259824_68513c0a4d389053de4df49e.svg"
+    },
+    {
+      "id": "1_1259825_2603b4c48535d9770b8835dc",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f495.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f495.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259825_2603b4c48535d9770b8835dc",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259825_2603b4c48535d9770b8835dc.svg"
+    },
+    {
+      "id": "1_1259826_0d95006e953171d0dd43daa3",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f60a.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f60a.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259826_0d95006e953171d0dd43daa3",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259826_0d95006e953171d0dd43daa3.svg"
+    },
+    {
+      "id": "1_1259827_b82c18c922b50746e874f540",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f914.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f914.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259827_b82c18c922b50746e874f540",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259827_b82c18c922b50746e874f540.svg"
+    },
+    {
+      "id": "1_1259830_c8b53bf420105d2b08bc562c",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f64f-1f3fe.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f64f-var1f3feUNI.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259830_c8b53bf420105d2b08bc562c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259830_c8b53bf420105d2b08bc562c.svg"
+    },
+    {
+      "id": "1_1259831_588d7091e3ac4181cd63216a",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f4af.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f4af.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259831_588d7091e3ac4181cd63216a",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259831_588d7091e3ac4181cd63216a.svg"
+    },
+    {
+      "id": "1_1259832_5bf46c8bd6163dd955324405",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f525.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f525.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259832_5bf46c8bd6163dd955324405",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259832_5bf46c8bd6163dd955324405.svg"
+    },
+    {
+      "id": "1_1259833_41a16cdb7427302ca9e1c996",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f440.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f440.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259833_41a16cdb7427302ca9e1c996",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259833_41a16cdb7427302ca9e1c996.svg"
+    },
+    {
+      "id": "1_1259835_802e3dea01cf2cf5c1516433",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f618.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f618.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259835_802e3dea01cf2cf5c1516433",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259835_802e3dea01cf2cf5c1516433.svg"
+    },
+    {
+      "id": "1_1259836_952497cfe005f75103e86e10",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f60e.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f60e.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259836_952497cfe005f75103e86e10",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259836_952497cfe005f75103e86e10.svg"
+    },
+    {
+      "id": "1_1259837_1a1a2635d3ac688dc1577ad4",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f629.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f629.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259837_1a1a2635d3ac688dc1577ad4",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259837_1a1a2635d3ac688dc1577ad4.svg"
+    },
+    {
+      "id": "1_1259838_fa99d8fde6c6224fa8ed0dde",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/2/svg/1f928.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f928.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259838_fa99d8fde6c6224fa8ed0dde",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259838_fa99d8fde6c6224fa8ed0dde.svg"
+    },
+    {
+      "id": "1_1259839_f40b17be803fbe5c639d7c1c",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f621.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f621.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259839_f40b17be803fbe5c639d7c1c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259839_f40b17be803fbe5c639d7c1c.svg"
+    },
+    {
+      "id": "1_1259840_182f6f58a36145edcb249a1b",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC BY",
+        "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://raw.githubusercontent.com/twitter/twemoji/gh-pages/2/svg/1f92e.svg",
+        "author_name": "Twitter. Inc.",
+        "author_url": "https://www.twitter.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/twemoji/1f92e.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_1259840_182f6f58a36145edcb249a1b",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_1259840_182f6f58a36145edcb249a1b.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_431792",
+  "locale": "en",
+  "name": "emoji",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/emoji",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/emoji",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Smart-Emoji_799_g.svg",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/emoji",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": null,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": null
+  }
+}

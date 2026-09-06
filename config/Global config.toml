@@ -1,11 +1,13 @@
 [startup]
-default_board = 'lots of stuff'
 welcome_messages = ["welcome to B L A A C", "Good luck with your conversation", "you've got this"]
 default_speaker = "ryzen"
 default_headphones="PCM2900C Audio CODEC"
 
+[boards]
+home_board = "quick-core-60"
+
 [tts]
-default_speaking_voice = 'TTS voices/chatty.safetensors'
+default_speaking_voice = 'alba'
 default_feedback_voice = 'charles'
 #warning: setting this value above 1 is possible but not recommended.
 expressiveness = 0.6

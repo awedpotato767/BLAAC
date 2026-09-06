@@ -164,11 +164,11 @@ class audioHandler(pykka.ThreadingActor):
             volume = self.volume
 
         #preprocess text to ensure it works
-        text = text.lstrip(" ") + "."
+        text = text.lstrip(" ")+"!"
         #fix short words
         padding = 5
         if len(text) < 7:
-            padding = 10
+            padding = 8
 
         try:
             voice_state = self._voices[voice]

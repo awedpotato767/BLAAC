@@ -1,0 +1,1329 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 25,
+      "label": "Milky Way",
+      "border_color": "rgb(204, 204, 204)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "conjunction",
+      "image_id": "1_554074_f3698a573096315621912bfa"
+    },
+    {
+      "id": 2,
+      "label": "Mercury",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15683_cd8df2c12005ae7441bcb054"
+    },
+    {
+      "id": 3,
+      "label": "Venus",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15684_50f80027d19603c2b7a6a983"
+    },
+    {
+      "id": 4,
+      "label": "Earth",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15686_0775ac31ec64c2c8f17824f4"
+    },
+    {
+      "id": 5,
+      "label": "Mars",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15687_a7c243af8d4f713691710cff"
+    },
+    {
+      "id": 6,
+      "label": "Jupiter",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15689_a72d1866cd31d2eba5c70a19"
+    },
+    {
+      "id": 7,
+      "label": "Saturn",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15691_8622933fdca087e6f8d61cd4"
+    },
+    {
+      "id": 8,
+      "label": "Uranus",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15692_22bd835cf3ee78cfd454e4ed"
+    },
+    {
+      "id": 9,
+      "label": "Neptune",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15693_0f84442bd27d5ea8bfab7205"
+    },
+    {
+      "id": 26,
+      "label": "planet",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554076_8e2c28c87f35fe6f6f709e74"
+    },
+    {
+      "id": 27,
+      "label": "star",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554075_8039a23c308ad4bd1a9dcc39"
+    },
+    {
+      "id": 28,
+      "label": "eclipse",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554073_f719cf41e0d4dcc82e20b072"
+    },
+    {
+      "id": 29,
+      "label": "lunar",
+      "border_color": "rgb(17, 112, 255)",
+      "background_color": "rgb(170, 204, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "adjective",
+      "image_id": "1_554072_bb02cbe10aad0a4dc1c551eb"
+    },
+    {
+      "id": 30,
+      "label": "solar",
+      "border_color": "rgb(17, 112, 255)",
+      "background_color": "rgb(170, 204, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "adjective",
+      "image_id": "1_554071_150f0eded5f1e0b1bfc506d7"
+    },
+    {
+      "id": 24,
+      "label": "sun",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_48126_04c0b80516fa298fb57beedf"
+    },
+    {
+      "id": 10,
+      "label": "moon",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15679_f48250f2f172f7b1885b64e1"
+    },
+    {
+      "id": 11,
+      "label": "world",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15695_384e933ff3fff072b0988a81"
+    },
+    {
+      "id": 12,
+      "label": "planet",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15681_6cbd38425f25dae3dce804ce"
+    },
+    {
+      "id": 13,
+      "label": "space",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15682_40e5be93fedb7ed9df6fb2e2"
+    },
+    {
+      "id": 31,
+      "label": "telescope",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554070_bf3a0667fa38af2ed85aad02"
+    },
+    {
+      "id": 32,
+      "label": "canyon",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554088_459b5c26e763bdcf8c4f3aab"
+    },
+    {
+      "id": 33,
+      "label": "peak",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554089_234ff71e74fe7258ad250c3f"
+    },
+    {
+      "id": 34,
+      "label": "bay",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554084_17e9838c9aadbdba30b97100"
+    },
+    {
+      "id": 35,
+      "label": "beach",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554083_effaa27afa2387325b838db4"
+    },
+    {
+      "id": 36,
+      "label": "pond",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554082_58480b540e3f4e46695ffaf9"
+    },
+    {
+      "id": 37,
+      "label": "meadow",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554081_c4fe103a403a4792e0203331"
+    },
+    {
+      "id": 14,
+      "label": "forest",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15678_e18f27a3395e4388b265ed83"
+    },
+    {
+      "id": 1,
+      "label": "there",
+      "border_color": "rgb(17, 112, 255)",
+      "background_color": "rgb(170, 204, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "adverb",
+      "image_id": "1_15340_c47c5386eb435a3e055a2a40"
+    },
+    {
+      "id": 38,
+      "label": "cave",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554087_d88a92f482c4923fba5c9870"
+    },
+    {
+      "id": 39,
+      "label": "cliff",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554086_64cd25ff8ea82b008e54c948"
+    },
+    {
+      "id": 40,
+      "label": "ground",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554085_303a7f35ce7e0cf0b8a39f40"
+    },
+    {
+      "id": 15,
+      "label": "hill",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15696_5997635e8eff5988378014d0"
+    },
+    {
+      "id": 16,
+      "label": "river",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15697_5b8e5e0f633afe904ea2244f"
+    },
+    {
+      "id": 17,
+      "label": "lake",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15675_c93f60b1c7b2da824a506a28"
+    },
+    {
+      "id": 18,
+      "label": "island",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15698_a4fdb87fee55e51d9588f5ba"
+    },
+    {
+      "id": 19,
+      "label": "mountain",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15699_cdff8935c880649ec0458abd"
+    },
+    {
+      "id": 20,
+      "label": "ocean",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "load_board": {
+        "id": "1_159939",
+        "url": "https://app.mycoughdrop.com/example/core-60-ocean",
+        "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-ocean",
+        "path": "board_1_159939.obf"
+      },
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15672_114fcfe867b212359746207e"
+    },
+    {
+      "id": 21,
+      "label": "continent",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15670_cb4330ff4f236a4df69178f4"
+    },
+    {
+      "id": 41,
+      "label": "nation",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554080_34f5b0a35e96f23432ebd903"
+    },
+    {
+      "id": 22,
+      "label": "country",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15669_798fd04aff596f2d3dc9ca84"
+    },
+    {
+      "id": 42,
+      "label": "region",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554079_4317e0898a77cef28805ff0c"
+    },
+    {
+      "id": 43,
+      "label": "town",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554078_f565a1057584a82236a6f82b"
+    },
+    {
+      "id": 23,
+      "label": "city",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_15668_7157a4d94149f1f4659b8a09"
+    },
+    {
+      "id": 44,
+      "label": "village",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_554077_75969c7972681b5663ce3503"
+    },
+    {
+      "id": 45,
+      "label": "universe",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_3006057_80ab771abab9a01bfd128024"
+    },
+    {
+      "id": 46,
+      "label": "galaxy",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_3006054_f155ec4b213477bc334b3dfb"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        45,
+        25,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        46,
+        27,
+        28,
+        29,
+        30,
+        24,
+        10,
+        11,
+        12,
+        13
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        31
+      ],
+      [
+        null,
+        null,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        14,
+        1
+      ],
+      [
+        null,
+        38,
+        39,
+        40,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      [
+        null,
+        null,
+        null,
+        21,
+        41,
+        22,
+        42,
+        43,
+        23,
+        44
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_554074_f3698a573096315621912bfa",
+      "width": 851,
+      "height": 851,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Milky Way.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554074_f3698a573096315621912bfa",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554074_f3698a573096315621912bfa.svg"
+    },
+    {
+      "id": "1_15683_cd8df2c12005ae7441bcb054",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/mercury/",
+        "author_name": "nikki rodriguez",
+        "author_url": "http://thenounproject.com/nrodriguezlima",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Mercury-3e281b44bd.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15683_cd8df2c12005ae7441bcb054",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15683_cd8df2c12005ae7441bcb054.svg"
+    },
+    {
+      "id": "1_15684_50f80027d19603c2b7a6a983",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/venus/",
+        "author_name": "MaxineVSG",
+        "author_url": "http://thenounproject.com/maxinevsg",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Venus-462b3a2a07.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15684_50f80027d19603c2b7a6a983",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15684_50f80027d19603c2b7a6a983.svg"
+    },
+    {
+      "id": "1_15686_0775ac31ec64c2c8f17824f4",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/earth/",
+        "author_name": "Alex WaZa",
+        "author_url": "http://thenounproject.com/alexwaza",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Earth-0681973141.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15686_0775ac31ec64c2c8f17824f4",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15686_0775ac31ec64c2c8f17824f4.svg"
+    },
+    {
+      "id": "1_15687_a7c243af8d4f713691710cff",
+      "width": 100,
+      "height": 99,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "http://thenounproject.com/term/mars/",
+        "author_name": "Unknown Designer",
+        "author_url": "http://thenounproject.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Mars-78613372f5.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15687_a7c243af8d4f713691710cff",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15687_a7c243af8d4f713691710cff.svg"
+    },
+    {
+      "id": "1_15689_a72d1866cd31d2eba5c70a19",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/jupiter/",
+        "author_name": "Hubert Orlik–Grzesik",
+        "author_url": "http://thenounproject.com/subhog",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Jupiter-2cc1783d5f.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15689_a72d1866cd31d2eba5c70a19",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15689_a72d1866cd31d2eba5c70a19.svg"
+    },
+    {
+      "id": "1_15691_8622933fdca087e6f8d61cd4",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/saturn/",
+        "author_name": "Benni",
+        "author_url": "http://thenounproject.com/misirlou",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Saturn-08fe142ca5.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15691_8622933fdca087e6f8d61cd4",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15691_8622933fdca087e6f8d61cd4.svg"
+    },
+    {
+      "id": "1_15692_22bd835cf3ee78cfd454e4ed",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/uranus/",
+        "author_name": "A.M. Briganti",
+        "author_url": "http://thenounproject.com/brigantiste",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Uranus-3d55165eed.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15692_22bd835cf3ee78cfd454e4ed",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15692_22bd835cf3ee78cfd454e4ed.svg"
+    },
+    {
+      "id": "1_15693_0f84442bd27d5ea8bfab7205",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/term/neptune/",
+        "author_name": "nikki rodriguez",
+        "author_url": "http://thenounproject.com/nrodriguezlima",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Neptune-a3cf1c496f.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15693_0f84442bd27d5ea8bfab7205",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15693_0f84442bd27d5ea8bfab7205.svg"
+    },
+    {
+      "id": "1_554076_8e2c28c87f35fe6f6f709e74",
+      "width": 100,
+      "height": 67,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/noun_project_3611.svg",
+        "author_name": "Romeo Barreto",
+        "author_url": "http://thenounproject.com/romeo",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Planet-309280db81.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554076_8e2c28c87f35fe6f6f709e74",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554076_8e2c28c87f35fe6f6f709e74.svg"
+    },
+    {
+      "id": "1_554075_8039a23c308ad4bd1a9dcc39",
+      "width": 32,
+      "height": 32,
+      "license": {
+        "type": "CC By 3.0",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "source_url": "https://icomoon.io",
+        "author_name": "Keyamoon",
+        "author_url": "http://keyamoon.com/",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/icomoon/star.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554075_8039a23c308ad4bd1a9dcc39",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554075_8039a23c308ad4bd1a9dcc39.svg"
+    },
+    {
+      "id": "1_554073_f719cf41e0d4dcc82e20b072",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/moon eclipse.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554073_f719cf41e0d4dcc82e20b072",
+      "content_type": "image/png",
+      "path": "images/image_1_554073_f719cf41e0d4dcc82e20b072.png"
+    },
+    {
+      "id": "1_554072_bb02cbe10aad0a4dc1c551eb",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/lunar phase.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554072_bb02cbe10aad0a4dc1c551eb",
+      "content_type": "image/png",
+      "path": "images/image_1_554072_bb02cbe10aad0a4dc1c551eb.png"
+    },
+    {
+      "id": "1_554071_150f0eded5f1e0b1bfc506d7",
+      "width": 50,
+      "height": 50,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/3ac95b9c-2aaa-4821-b930-17b2c69947e4.svg",
+        "author_name": "Luis Prado",
+        "author_url": "http://thenounproject.com/Luis",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/solar panel-5ac094f087.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554071_150f0eded5f1e0b1bfc506d7",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554071_150f0eded5f1e0b1bfc506d7.svg"
+    },
+    {
+      "id": "1_48126_04c0b80516fa298fb57beedf",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/sun.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_48126_04c0b80516fa298fb57beedf",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_48126_04c0b80516fa298fb57beedf.svg"
+    },
+    {
+      "id": "1_15679_f48250f2f172f7b1885b64e1",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "http://thenounproject.com/term/moon/",
+        "author_name": "Travis Yunis",
+        "author_url": "http://thenounproject.com/mr.yunis",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Moon-3f8b08a72d.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15679_f48250f2f172f7b1885b64e1",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15679_f48250f2f172f7b1885b64e1.svg"
+    },
+    {
+      "id": "1_15695_384e933ff3fff072b0988a81",
+      "width": 851,
+      "height": 851,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/world.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15695_384e933ff3fff072b0988a81",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15695_384e933ff3fff072b0988a81.svg"
+    },
+    {
+      "id": "1_15681_6cbd38425f25dae3dce804ce",
+      "width": 100,
+      "height": 67,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "http://thenounproject.com/term/planet/",
+        "author_name": "Romeo Barreto",
+        "author_url": "http://thenounproject.com/romeo",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Planet-309280db81.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15681_6cbd38425f25dae3dce804ce",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_15681_6cbd38425f25dae3dce804ce.svg"
+    },
+    {
+      "id": "1_15682_40e5be93fedb7ed9df6fb2e2",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/space.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15682_40e5be93fedb7ed9df6fb2e2",
+      "content_type": "image/png",
+      "path": "images/image_1_15682_40e5be93fedb7ed9df6fb2e2.png"
+    },
+    {
+      "id": "1_554070_bf3a0667fa38af2ed85aad02",
+      "width": 63,
+      "height": 100,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/noun_project_13598-01.svg",
+        "author_name": "Timothy Dilich",
+        "author_url": "http://thenounproject.com/mosaic7",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Telescope-db275a8981.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554070_bf3a0667fa38af2ed85aad02",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554070_bf3a0667fa38af2ed85aad02.svg"
+    },
+    {
+      "id": "1_554088_459b5c26e763bdcf8c4f3aab",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Valley.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554088_459b5c26e763bdcf8c4f3aab",
+      "content_type": "image/png",
+      "path": "images/image_1_554088_459b5c26e763bdcf8c4f3aab.png"
+    },
+    {
+      "id": "1_554089_234ff71e74fe7258ad250c3f",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/peak.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554089_234ff71e74fe7258ad250c3f",
+      "content_type": "image/png",
+      "path": "images/image_1_554089_234ff71e74fe7258ad250c3f.png"
+    },
+    {
+      "id": "1_554084_17e9838c9aadbdba30b97100",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/bay.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554084_17e9838c9aadbdba30b97100",
+      "content_type": "image/png",
+      "path": "images/image_1_554084_17e9838c9aadbdba30b97100.png"
+    },
+    {
+      "id": "1_554083_effaa27afa2387325b838db4",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/beach.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554083_effaa27afa2387325b838db4",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554083_effaa27afa2387325b838db4.svg"
+    },
+    {
+      "id": "1_554082_58480b540e3f4e46695ffaf9",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/pond.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554082_58480b540e3f4e46695ffaf9",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554082_58480b540e3f4e46695ffaf9.svg"
+    },
+    {
+      "id": "1_554081_c4fe103a403a4792e0203331",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/grass_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554081_c4fe103a403a4792e0203331",
+      "content_type": "image/png",
+      "path": "images/image_1_554081_c4fe103a403a4792e0203331.png"
+    },
+    {
+      "id": "1_15678_e18f27a3395e4388b265ed83",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/forest.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15678_e18f27a3395e4388b265ed83",
+      "content_type": "image/png",
+      "path": "images/image_1_15678_e18f27a3395e4388b265ed83.png"
+    },
+    {
+      "id": "1_15340_c47c5386eb435a3e055a2a40",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/there.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15340_c47c5386eb435a3e055a2a40",
+      "content_type": "image/png",
+      "path": "images/image_1_15340_c47c5386eb435a3e055a2a40.png"
+    },
+    {
+      "id": "1_554087_d88a92f482c4923fba5c9870",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/cave.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554087_d88a92f482c4923fba5c9870",
+      "content_type": "image/png",
+      "path": "images/image_1_554087_d88a92f482c4923fba5c9870.png"
+    },
+    {
+      "id": "1_554086_64cd25ff8ea82b008e54c948",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/cliff.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554086_64cd25ff8ea82b008e54c948",
+      "content_type": "image/png",
+      "path": "images/image_1_554086_64cd25ff8ea82b008e54c948.png"
+    },
+    {
+      "id": "1_554085_303a7f35ce7e0cf0b8a39f40",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/ground.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554085_303a7f35ce7e0cf0b8a39f40",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554085_303a7f35ce7e0cf0b8a39f40.svg"
+    },
+    {
+      "id": "1_15696_5997635e8eff5988378014d0",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/mountain range_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15696_5997635e8eff5988378014d0",
+      "content_type": "image/png",
+      "path": "images/image_1_15696_5997635e8eff5988378014d0.png"
+    },
+    {
+      "id": "1_15697_5b8e5e0f633afe904ea2244f",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/river.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15697_5b8e5e0f633afe904ea2244f",
+      "content_type": "image/png",
+      "path": "images/image_1_15697_5b8e5e0f633afe904ea2244f.png"
+    },
+    {
+      "id": "1_15675_c93f60b1c7b2da824a506a28",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/lake.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15675_c93f60b1c7b2da824a506a28",
+      "content_type": "image/png",
+      "path": "images/image_1_15675_c93f60b1c7b2da824a506a28.png"
+    },
+    {
+      "id": "1_15698_a4fdb87fee55e51d9588f5ba",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/island_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15698_a4fdb87fee55e51d9588f5ba",
+      "content_type": "image/png",
+      "path": "images/image_1_15698_a4fdb87fee55e51d9588f5ba.png"
+    },
+    {
+      "id": "1_15699_cdff8935c880649ec0458abd",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/mountain.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15699_cdff8935c880649ec0458abd",
+      "content_type": "image/png",
+      "path": "images/image_1_15699_cdff8935c880649ec0458abd.png"
+    },
+    {
+      "id": "1_15672_114fcfe867b212359746207e",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/ocean.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15672_114fcfe867b212359746207e",
+      "content_type": "image/png",
+      "path": "images/image_1_15672_114fcfe867b212359746207e.png"
+    },
+    {
+      "id": "1_15670_cb4330ff4f236a4df69178f4",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/continent.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15670_cb4330ff4f236a4df69178f4",
+      "content_type": "image/png",
+      "path": "images/image_1_15670_cb4330ff4f236a4df69178f4.png"
+    },
+    {
+      "id": "1_554080_34f5b0a35e96f23432ebd903",
+      "width": 851,
+      "height": 851,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/country The Czech Republic.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554080_34f5b0a35e96f23432ebd903",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_554080_34f5b0a35e96f23432ebd903.svg"
+    },
+    {
+      "id": "1_15669_798fd04aff596f2d3dc9ca84",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/country.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15669_798fd04aff596f2d3dc9ca84",
+      "content_type": "image/png",
+      "path": "images/image_1_15669_798fd04aff596f2d3dc9ca84.png"
+    },
+    {
+      "id": "1_554079_4317e0898a77cef28805ff0c",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Madrid Region.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554079_4317e0898a77cef28805ff0c",
+      "content_type": "image/png",
+      "path": "images/image_1_554079_4317e0898a77cef28805ff0c.png"
+    },
+    {
+      "id": "1_554078_f565a1057584a82236a6f82b",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/town.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554078_f565a1057584a82236a6f82b",
+      "content_type": "image/png",
+      "path": "images/image_1_554078_f565a1057584a82236a6f82b.png"
+    },
+    {
+      "id": "1_15668_7157a4d94149f1f4659b8a09",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/city.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_15668_7157a4d94149f1f4659b8a09",
+      "content_type": "image/png",
+      "path": "images/image_1_15668_7157a4d94149f1f4659b8a09.png"
+    },
+    {
+      "id": "1_554077_75969c7972681b5663ce3503",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/village.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_554077_75969c7972681b5663ce3503",
+      "content_type": "image/png",
+      "path": "images/image_1_554077_75969c7972681b5663ce3503.png"
+    },
+    {
+      "id": "1_3006057_80ab771abab9a01bfd128024",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "David",
+        "author_url": "http://thenounproject.com/kaxgyatso",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/sun_121_316552.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_3006057_80ab771abab9a01bfd128024",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_3006057_80ab771abab9a01bfd128024.svg"
+    },
+    {
+      "id": "1_3006054_f155ec4b213477bc334b3dfb",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "BomSymbol",
+        "author_url": "http://thenounproject.com/korawan_m",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/The-Milky-Way_524_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_3006054_f155ec4b213477bc334b3dfb",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_3006054_f155ec4b213477bc334b3dfb.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_1190",
+  "locale": "en",
+  "name": "Core 60 - there",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-there",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-there",
+  "label_locale": "en",
+  "vocalization_locale": "en",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://s3.amazonaws.com/opensymbols/libraries/arasaac/board_3.png",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-there",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": false,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": false
+  }
+}

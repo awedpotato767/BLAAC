@@ -286,4 +286,7 @@ attributes:
 - ext_BLAAC_force_voice
 - unhandled_ext_options
 
+function load_obz(dirpath):
+
+Loads all boards in the given directory, saving all of the sounds.
 

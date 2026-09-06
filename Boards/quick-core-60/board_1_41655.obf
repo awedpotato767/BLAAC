@@ -1,0 +1,1018 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 5,
+      "label": "Santa Claus",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117416_8d1d521d2ef6f2563c91ebb3"
+    },
+    {
+      "id": 3,
+      "label": "stocking",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117414_db98654f0faaeb1d0f909a1f"
+    },
+    {
+      "id": 4,
+      "label": "Christmas tree",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117415_1b800aa42dcd614e5fcebe84"
+    },
+    {
+      "id": 17,
+      "label": "wreath",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555129_3893f833caf6366494494af7"
+    },
+    {
+      "id": 15,
+      "label": "birthday",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117401_fdaf49f52280028a02133b11"
+    },
+    {
+      "id": 16,
+      "label": "anniversary",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117402_27efac84bf7e3425ca50c750"
+    },
+    {
+      "id": 18,
+      "label": "Bar Mitzveh",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555111_6b40dc57280d367a1eab8fd5"
+    },
+    {
+      "id": 19,
+      "label": "wedding",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555118_e6854c82dbf3467f70580133"
+    },
+    {
+      "id": 20,
+      "label": "Rudolph",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555130_a598b8cb329628cdb756e366"
+    },
+    {
+      "id": 21,
+      "label": "carolers",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555131_775d363ed35c0961b95a21a1"
+    },
+    {
+      "id": 22,
+      "label": "advent calendar",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555132_a5ab6ab4319195f7cd228589"
+    },
+    {
+      "id": 1,
+      "label": "fireworks",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117412_b6a1f7f30d3c4c1d8ad9897c"
+    },
+    {
+      "id": 2,
+      "label": "costume",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117417_eef6bac6d32779090e7aea6c"
+    },
+    {
+      "id": 23,
+      "label": "trick or treat",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555127_8cf951170ee19fa66b786b2c"
+    },
+    {
+      "id": 24,
+      "label": "jack-o-lantern",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555128_f0ae9c53e2888c7b9c2e3116"
+    },
+    {
+      "id": 6,
+      "label": "holiday",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555119_eeff018a6bbecf967643347f"
+    },
+    {
+      "id": 25,
+      "label": "eve",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555107_56d03daaa072cee0c14a750c"
+    },
+    {
+      "id": 7,
+      "label": "New Year's",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117404_a85262309a10df7d6ecaa86d"
+    },
+    {
+      "id": 26,
+      "label": "Chinese New Year",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555108_490fd382d0075b314820e035"
+    },
+    {
+      "id": 8,
+      "label": "Valentine's",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "conjunction",
+      "image_id": "1_555125_025299ac4020c189c4822ab0"
+    },
+    {
+      "id": 9,
+      "label": "St. Patrick's Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117406_6f97472bdc73c6412ab0d020"
+    },
+    {
+      "id": 10,
+      "label": "Easter",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117407_da9a83e203269aca5ca81f59"
+    },
+    {
+      "id": 27,
+      "label": "Mother's Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555109_aa3965766e3ccf4753c8f4cc"
+    },
+    {
+      "id": 28,
+      "label": "Father's Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555110_2308205994d274e51aac9d64"
+    },
+    {
+      "id": 29,
+      "label": "Ash Wednesday",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555113_a8bb58ca8403725059281ecf"
+    },
+    {
+      "id": 30,
+      "label": "Mardi Gras",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555124_0f32916f2f74841a4aac39ec"
+    },
+    {
+      "id": 31,
+      "label": "Earth Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555115_4c140fa5aba879539672ffbc"
+    },
+    {
+      "id": 32,
+      "label": "Martin Luther King Jr. Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555122_a58750eeb9e389af6c8ea52c"
+    },
+    {
+      "id": 33,
+      "label": "Groundhog Day",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555121_056c68cc005ed1c54a1af511"
+    },
+    {
+      "id": 34,
+      "label": "Ramadan",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555126_a7b9cfafe80f9376ff101d0b"
+    },
+    {
+      "id": 35,
+      "label": "Yom Kippur",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555116_ba2a34d7ff77ef4c12986dea"
+    },
+    {
+      "id": 11,
+      "label": "Fourth of July",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117408_fd835f1e69460efaf9e351a9"
+    },
+    {
+      "id": 12,
+      "label": "Halloween",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117409_341c14beb8c8a791fd477103"
+    },
+    {
+      "id": 13,
+      "label": "Thanksgiving",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117410_6fae4adf0d130b027e4cd200"
+    },
+    {
+      "id": 36,
+      "label": "Hannukah",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_555123_89928162354b292fe5ae86a8"
+    },
+    {
+      "id": 14,
+      "label": "Christmas",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_117411_796f686e3cfb397bb29f6c7f"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        5,
+        3,
+        4,
+        17,
+        null,
+        15,
+        16,
+        18,
+        19,
+        null
+      ],
+      [
+        20,
+        21,
+        22,
+        null,
+        null,
+        1,
+        2,
+        23,
+        24,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        6,
+        25,
+        null,
+        null,
+        null
+      ],
+      [
+        7,
+        26,
+        8,
+        9,
+        10,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      [
+        null,
+        32,
+        33,
+        34,
+        35,
+        11,
+        12,
+        13,
+        36,
+        14
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_117416_8d1d521d2ef6f2563c91ebb3",
+      "width": 128,
+      "height": 128,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "http://www.iconarchive.com/artist/handdrawngoods.html",
+        "author_name": "Hand-Drawn Goods",
+        "author_url": "http://www.iconarchive.com/artist/handdrawngoods.html",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/icon_archive/santa_portrait.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117416_8d1d521d2ef6f2563c91ebb3",
+      "content_type": "image/png",
+      "path": "images/image_1_117416_8d1d521d2ef6f2563c91ebb3.png"
+    },
+    {
+      "id": "1_117414_db98654f0faaeb1d0f909a1f",
+      "width": 128,
+      "height": 128,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/4.0/",
+        "source_url": "http://www.iconarchive.com/artist/handdrawngoods.html",
+        "author_name": "Hand-Drawn Goods",
+        "author_url": "http://www.iconarchive.com/artist/handdrawngoods.html",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/icon_archive/christmas_stocking.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117414_db98654f0faaeb1d0f909a1f",
+      "content_type": "image/png",
+      "path": "images/image_1_117414_db98654f0faaeb1d0f909a1f.png"
+    },
+    {
+      "id": "1_117415_1b800aa42dcd614e5fcebe84",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Christmas tree_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117415_1b800aa42dcd614e5fcebe84",
+      "content_type": "image/png",
+      "path": "images/image_1_117415_1b800aa42dcd614e5fcebe84.png"
+    },
+    {
+      "id": "1_555129_3893f833caf6366494494af7",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/door wreath.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555129_3893f833caf6366494494af7",
+      "content_type": "image/png",
+      "path": "images/image_1_555129_3893f833caf6366494494af7.png"
+    },
+    {
+      "id": "1_117401_fdaf49f52280028a02133b11",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Happy Birthday!.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117401_fdaf49f52280028a02133b11",
+      "content_type": "image/png",
+      "path": "images/image_1_117401_fdaf49f52280028a02133b11.png"
+    },
+    {
+      "id": "1_117402_27efac84bf7e3425ca50c750",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/New Year.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117402_27efac84bf7e3425ca50c750",
+      "content_type": "image/png",
+      "path": "images/image_1_117402_27efac84bf7e3425ca50c750.png"
+    },
+    {
+      "id": "1_555111_6b40dc57280d367a1eab8fd5",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/cake bar.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555111_6b40dc57280d367a1eab8fd5",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555111_6b40dc57280d367a1eab8fd5.svg"
+    },
+    {
+      "id": "1_555118_e6854c82dbf3467f70580133",
+      "width": 128,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Gan Khoon Lay",
+        "author_url": "http://thenounproject.com/leremy",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Wedding-couple_199_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555118_e6854c82dbf3467f70580133",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555118_e6854c82dbf3467f70580133.svg"
+    },
+    {
+      "id": "1_555130_a598b8cb329628cdb756e366",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Rudolph.svg.varianted-skin.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555130_a598b8cb329628cdb756e366",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555130_a598b8cb329628cdb756e366.svg"
+    },
+    {
+      "id": "1_555131_775d363ed35c0961b95a21a1",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/sing carols.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555131_775d363ed35c0961b95a21a1",
+      "content_type": "image/png",
+      "path": "images/image_1_555131_775d363ed35c0961b95a21a1.png"
+    },
+    {
+      "id": "1_555132_a5ab6ab4319195f7cd228589",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Advent calendar.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555132_a5ab6ab4319195f7cd228589",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555132_a5ab6ab4319195f7cd228589.svg"
+    },
+    {
+      "id": "1_117412_b6a1f7f30d3c4c1d8ad9897c",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/fireworks 2.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117412_b6a1f7f30d3c4c1d8ad9897c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117412_b6a1f7f30d3c4c1d8ad9897c.svg"
+    },
+    {
+      "id": "1_117417_eef6bac6d32779090e7aea6c",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Halloween.svg.varianted-skin.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117417_eef6bac6d32779090e7aea6c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117417_eef6bac6d32779090e7aea6c.svg"
+    },
+    {
+      "id": "1_555127_8cf951170ee19fa66b786b2c",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/trick or treat.svg.varianted-skin.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555127_8cf951170ee19fa66b786b2c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555127_8cf951170ee19fa66b786b2c.svg"
+    },
+    {
+      "id": "1_555128_f0ae9c53e2888c7b9c2e3116",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/pumpkin lantern.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555128_f0ae9c53e2888c7b9c2e3116",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555128_f0ae9c53e2888c7b9c2e3116.svg"
+    },
+    {
+      "id": "1_555119_eeff018a6bbecf967643347f",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Christmas decorations.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555119_eeff018a6bbecf967643347f",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555119_eeff018a6bbecf967643347f.svg"
+    },
+    {
+      "id": "1_555107_56d03daaa072cee0c14a750c",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/before.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555107_56d03daaa072cee0c14a750c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555107_56d03daaa072cee0c14a750c.svg"
+    },
+    {
+      "id": "1_117404_a85262309a10df7d6ecaa86d",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/New Year's Eve.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117404_a85262309a10df7d6ecaa86d",
+      "content_type": "image/png",
+      "path": "images/image_1_117404_a85262309a10df7d6ecaa86d.png"
+    },
+    {
+      "id": "1_555108_490fd382d0075b314820e035",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Ron Scott",
+        "author_url": "http://thenounproject.com/ronnscott",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/chinese-new-year_93_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555108_490fd382d0075b314820e035",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555108_490fd382d0075b314820e035.svg"
+    },
+    {
+      "id": "1_555125_025299ac4020c189c4822ab0",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/heart shape.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555125_025299ac4020c189c4822ab0",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555125_025299ac4020c189c4822ab0.svg"
+    },
+    {
+      "id": "1_117406_6f97472bdc73c6412ab0d020",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/15d43258-98b2-4cfb-8a6d-4614c08ba6d8.svg",
+        "author_name": "factor[e] design initiative",
+        "author_url": "http://thenounproject.com/factor_e",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Shamrock-3323b593ec.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117406_6f97472bdc73c6412ab0d020",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117406_6f97472bdc73c6412ab0d020.svg"
+    },
+    {
+      "id": "1_117407_da9a83e203269aca5ca81f59",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Easter egg.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117407_da9a83e203269aca5ca81f59",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117407_da9a83e203269aca5ca81f59.svg"
+    },
+    {
+      "id": "1_555109_aa3965766e3ccf4753c8f4cc",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Mother's Day.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555109_aa3965766e3ccf4753c8f4cc",
+      "content_type": "image/png",
+      "path": "images/image_1_555109_aa3965766e3ccf4753c8f4cc.png"
+    },
+    {
+      "id": "1_555110_2308205994d274e51aac9d64",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Father's Day.png.varianted-skin.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555110_2308205994d274e51aac9d64",
+      "content_type": "image/png",
+      "path": "images/image_1_555110_2308205994d274e51aac9d64.png"
+    },
+    {
+      "id": "1_555113_a8bb58ca8403725059281ecf",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Ash Wednesday.svg.varianted-skin.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555113_a8bb58ca8403725059281ecf",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555113_a8bb58ca8403725059281ecf.svg"
+    },
+    {
+      "id": "1_555124_0f32916f2f74841a4aac39ec",
+      "width": 853,
+      "height": 853,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/beads.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555124_0f32916f2f74841a4aac39ec",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555124_0f32916f2f74841a4aac39ec.svg"
+    },
+    {
+      "id": "1_555115_4c140fa5aba879539672ffbc",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Earth_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555115_4c140fa5aba879539672ffbc",
+      "content_type": "image/png",
+      "path": "images/image_1_555115_4c140fa5aba879539672ffbc.png"
+    },
+    {
+      "id": "1_555122_a58750eeb9e389af6c8ea52c",
+      "width": 100,
+      "height": 100,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/",
+        "source_url": "http://thenounproject.com/site_media/svg/e1785e53-ab5a-42a8-8bfc-5dfa7564305b.svg",
+        "author_name": "Humberto Pornaro",
+        "author_url": "http://thenounproject.com/humberto.pornaro",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/King-3dd9c76968.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555122_a58750eeb9e389af6c8ea52c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555122_a58750eeb9e389af6c8ea52c.svg"
+    },
+    {
+      "id": "1_555121_056c68cc005ed1c54a1af511",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Matt Brooks",
+        "author_url": "http://thenounproject.com/Mattebrooks",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Groundhog_534_29014.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555121_056c68cc005ed1c54a1af511",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555121_056c68cc005ed1c54a1af511.svg"
+    },
+    {
+      "id": "1_555126_a7b9cfafe80f9376ff101d0b",
+      "width": 100,
+      "height": 75,
+      "license": {
+        "type": "public domain",
+        "copyright_notice_url": "http://en.wikipedia.org/wiki/Public_domain",
+        "source_url": "http://thenounproject.com/site_media/svg/noun_project_2643.svg",
+        "author_name": "Anas Ramadan",
+        "author_url": "http://thenounproject.com/anasr",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/Teapot-a1bafa785b.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555126_a7b9cfafe80f9376ff101d0b",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_555126_a7b9cfafe80f9376ff101d0b.svg"
+    },
+    {
+      "id": "1_555116_ba2a34d7ff77ef4c12986dea",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/horn.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555116_ba2a34d7ff77ef4c12986dea",
+      "content_type": "image/png",
+      "path": "images/image_1_555116_ba2a34d7ff77ef4c12986dea.png"
+    },
+    {
+      "id": "1_117408_fd835f1e69460efaf9e351a9",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/fireworks.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117408_fd835f1e69460efaf9e351a9",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117408_fd835f1e69460efaf9e351a9.svg"
+    },
+    {
+      "id": "1_117409_341c14beb8c8a791fd477103",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/Halloween.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117409_341c14beb8c8a791fd477103",
+      "content_type": "image/png",
+      "path": "images/image_1_117409_341c14beb8c8a791fd477103.png"
+    },
+    {
+      "id": "1_117410_6fae4adf0d130b027e4cd200",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/turkey_1.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117410_6fae4adf0d130b027e4cd200",
+      "content_type": "image/png",
+      "path": "images/image_1_117410_6fae4adf0d130b027e4cd200.png"
+    },
+    {
+      "id": "1_555123_89928162354b292fe5ae86a8",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/menorah.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_555123_89928162354b292fe5ae86a8",
+      "content_type": "image/png",
+      "path": "images/image_1_555123_89928162354b292fe5ae86a8.png"
+    },
+    {
+      "id": "1_117411_796f686e3cfb397bb29f6c7f",
+      "width": 850,
+      "height": 850,
+      "license": {
+        "type": "CC BY-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-sa/2.0/uk",
+        "author_name": "Paxtoncrafts Charitable Trust ",
+        "author_url": "http://straight-street.org/lic.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/mulberry/Christmas.svg.varianted-skin.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_117411_796f686e3cfb397bb29f6c7f",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_117411_796f686e3cfb397bb29f6c7f.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_41655",
+  "locale": "en",
+  "name": "Core 60 - holiday",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-holiday",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-holiday",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://s3.amazonaws.com/opensymbols/libraries/icon_archive/gift_holiday.png",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-holiday",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": null,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": null
+  }
+}

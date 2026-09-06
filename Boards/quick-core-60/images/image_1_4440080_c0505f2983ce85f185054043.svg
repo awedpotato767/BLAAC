@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1200" viewBox="0 0 1200 1200"><g><g transform="translate(600 600) scale(0.69 0.69) rotate(0) translate(-600 -600)" style="fill:#1A1A1A;"><svg fill="#1A1A1A" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 722 722" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><defs><style type="text/css">
+   
+    .fil0 {fill:#1A1A1A}
+    .fil1 {fill:black;fill-rule:nonzero}
+   
+  </style></defs><g><path class="fil0" d="M361 106c16,0 28,12 28,27l0 200 200 0c15,0 28,13 28,28 0,16 -13,28 -28,28l-200 0 0 200c0,15 -12,28 -28,28 -15,0 -28,-13 -28,-28l0 -200 -200 0c-15,0 -27,-12 -27,-28 0,-15 12,-28 27,-28l200 0 0 -200c0,-15 13,-27 28,-27z"></path><path class="fil1" d="M361 0c200,0 361,162 361,361 0,200 -161,361 -361,361 -199,0 -361,-161 -361,-361 0,-199 162,-361 361,-361zm0 26c-185,0 -335,150 -335,335 0,186 150,336 335,336 186,0 336,-150 336,-336 0,-185 -150,-335 -336,-335z"></path></g></svg></g></g></svg>

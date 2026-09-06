@@ -1,0 +1,164 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "somewhere else",
+      "border_color": "rgb(255, 112, 17)",
+      "background_color": "rgb(255, 204, 170)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "noun",
+      "image_id": "1_4439925_8287e14c784afede7454ff45"
+    },
+    {
+      "id": 2,
+      "label": "[my places]",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_4439927_88bfc6acf53ceb3996251b9c"
+    }
+  ],
+  "grid": {
+    "rows": 6,
+    "columns": 10,
+    "order": [
+      [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_4439925_8287e14c784afede7454ff45",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Arthur Shlain",
+        "author_url": "http://thenounproject.com/ArtZ91",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/solution_164_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439925_8287e14c784afede7454ff45",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439925_8287e14c784afede7454ff45.svg"
+    },
+    {
+      "id": "1_4439927_88bfc6acf53ceb3996251b9c",
+      "width": 150,
+      "height": 150,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/3.0/us/",
+        "author_name": "Pundimon",
+        "author_url": "http://thenounproject.com/pundimon",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/more_169_g.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4439927_88bfc6acf53ceb3996251b9c",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_4439927_88bfc6acf53ceb3996251b9c.svg"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_2000994",
+  "locale": "en",
+  "name": "Core 60 - Somewhere Else",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/core-60-somewhere-else",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/core-60-somewhere-else",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://d18vdu4p71yql0.cloudfront.net/libraries/noun-project/solution_164_g.svg",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/core-60-somewhere-else",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": false,
+    "categories": null,
+    "text_only": null,
+    "hide_empty": false
+  }
+}

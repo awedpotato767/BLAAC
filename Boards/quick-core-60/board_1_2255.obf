@@ -1,0 +1,235 @@
+{
+  "format": "open-board-0.1",
+  "license": {
+    "type": "CC By",
+    "copyright_notice_url": "https://creativecommons.org/licenses/by/4.0/",
+    "author_name": "OpenAAC",
+    "author_url": "https://www.openaac.org"
+  },
+  "buttons": [
+    {
+      "id": 1,
+      "label": "0",
+      "action": "+0",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 2,
+      "label": "1",
+      "action": "+1",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 3,
+      "label": "2",
+      "action": "+2",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 4,
+      "label": "3",
+      "action": "+3",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 5,
+      "label": "4",
+      "action": "+4",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 6,
+      "label": "5",
+      "action": "+5",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 7,
+      "label": " ",
+      "action": ":space",
+      "border_color": "rgb(204, 204, 204)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_18084_337acd5019e9cfe8789e22aa"
+    },
+    {
+      "id": 8,
+      "label": "6",
+      "action": "+6",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 9,
+      "label": "7",
+      "action": "+7",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 10,
+      "label": "8",
+      "action": "+8",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 11,
+      "label": "9",
+      "action": "+9",
+      "border_color": "rgb(170, 170, 170)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 12,
+      "label": " ",
+      "action": ":space",
+      "border_color": "rgb(204, 204, 204)",
+      "background_color": "rgb(255, 255, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "image_id": "1_18085_1aa97d8906745c4982537440"
+    },
+    {
+      "id": 13,
+      "label": ":",
+      "action": "+:",
+      "border_color": "rgb(0, 138, 217)",
+      "background_color": "rgb(115, 204, 255)",
+      "ext_coughdrop_add_vocalization": true
+    },
+    {
+      "id": 14,
+      "label": "o'clock",
+      "border_color": "rgb(0, 138, 217)",
+      "background_color": "rgb(115, 204, 255)",
+      "ext_coughdrop_add_vocalization": true,
+      "ext_coughdrop_part_of_speech": "adverb",
+      "image_id": "1_4440219_ba84759cc0b5d76d6269642c"
+    }
+  ],
+  "grid": {
+    "rows": 3,
+    "columns": 6,
+    "order": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        13,
+        14
+      ]
+    ]
+  },
+  "images": [
+    {
+      "id": "1_18084_337acd5019e9cfe8789e22aa",
+      "width": 467,
+      "height": 467,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/4.0/",
+        "author_name": "CoughDrop",
+        "author_url": "https://www.mycoughdrop.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/coughdrop_symbols/space.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_18084_337acd5019e9cfe8789e22aa",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_18084_337acd5019e9cfe8789e22aa.svg"
+    },
+    {
+      "id": "1_18085_1aa97d8906745c4982537440",
+      "width": 467,
+      "height": 467,
+      "license": {
+        "type": "CC By",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by/4.0/",
+        "author_name": "CoughDrop",
+        "author_url": "https://www.mycoughdrop.com",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/coughdrop_symbols/space.svg",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_18085_1aa97d8906745c4982537440",
+      "content_type": "image/svg+xml",
+      "path": "images/image_1_18085_1aa97d8906745c4982537440.svg"
+    },
+    {
+      "id": "1_4440219_ba84759cc0b5d76d6269642c",
+      "width": 250,
+      "height": 250,
+      "license": {
+        "type": "CC BY-NC-SA",
+        "copyright_notice_url": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "author_name": "Sergio Palao",
+        "author_url": "http://www.catedu.es/arasaac/condiciones_uso.php",
+        "uneditable": true
+      },
+      "protected": false,
+      "url": "https://d18vdu4p71yql0.cloudfront.net/libraries/arasaac/exactly one o'clock.png",
+      "data_url": "https://app.mycoughdrop.com/api/v1/images/1_4440219_ba84759cc0b5d76d6269642c",
+      "content_type": "image/png",
+      "path": "images/image_1_4440219_ba84759cc0b5d76d6269642c.png"
+    }
+  ],
+  "sounds": [
+
+  ],
+  "id": "1_2255",
+  "locale": "en",
+  "name": "Numbers",
+  "default_layout": "landscape",
+  "background": null,
+  "url": "https://app.mycoughdrop.com/example/numbers",
+  "data_url": "https://app.mycoughdrop.com/api/v1/boards/example/numbers",
+  "label_locale": "en",
+  "vocalization_locale": "en",
+  "description_html": "built with CoughDrop",
+  "ext_coughdrop_image_url": "https://s3.amazonaws.com/opensymbols/libraries/arasaac/numbers.png",
+  "ext_coughdrop_settings": {
+    "private": false,
+    "key": "example/numbers",
+    "word_suggestions": false,
+    "protected": false,
+    "home_board": false,
+    "categories": [
+
+    ],
+    "text_only": null,
+    "hide_empty": false
+  }
+}
