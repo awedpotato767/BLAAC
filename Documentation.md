@@ -184,20 +184,63 @@ By default, BLAAC says each word as it comes, then pressing enter says the whole
 
 ## Techinical details
 
-BLAAC is split into several modules.
+At its core, BLAAC is a program about IO.
 
-- audioHandler
-- UI
-- board management
+The aim is to have one central IO/action handler, that takes actions as they come in a queue from Input objects, and responds to them by distributing commands among Output objects.
 
-### audioHandler
+Modules, classes and functions will be named accordingly:
+- Input for objects that deal with any user input.
+- Output - likewise for user output
+- IO for objects handling both. 
+- Handlers deal with neither user input nor output directly.
 
-This actor is the ony thing that touches any audio device. Text and audio data go in, speech and sound come out.
-These actors have a bad habit of failing silently, so if you want to get an error, please use a blocking operation to inspect.
+The labels of Input and Output are inherited, so if a module contains an Output class, an Input function and a handler class, it is an IO module.
 
-Contains one class:
+Modules should be limited to one type of IO (e.g. audio), and classes to one IO device (e.g. headset). Should, not must, but needing to violate this is usually a bad idea.
 
-audioHandler(pykka.ThreadingActor)
+Since a lot of the work is done through asynchrounous multithreading, logging all fatal and non-fatal errors is essential for all code. Where possible, design modules for crash resilience and recovery over pure efficiency.
+
+### The message queue:
+
+This system is intended to make multi-device and multithreaded IO work without requiring significant increases in developer workload every time. Calls to object methods are likely  more efficient on the CPU, but that will require extra decoding work.
+
+All input devices can put the following messages on the message queue:
+These are in the style of openAAC's "action" attributes.
+
+    - ":ext_BLAAC_focus_btn_<row>_<column>"
+    - ":ext_BLAAC_select"
+    - ":ext_BLAAC_hide_btn_" #IN FUTURE 
+    - ":ext_BLAAC_focus_<l/r/u/d><n/l/p/d>"
+        - lrud indicates direction and nlpd indicates wrapping - "None", "Loop", "Page-like" (english sentence organisation), and "Default".
+    - ":ext_BLAAC_voice_<voice>"
+    - ":ext_BLAAC_volume_<vm>"
+    - ":ext_BLAAC_speak_screen"
+    - ":ext_BLAAC_speak_sentence"
+    - ":ext_BLAAC_load_board_<path_or_url>"
+    - "+<something>" 
+    - ":space"
+    - ":home"
+    - ":clear"
+    - ":backspace"
+    
+If two actions (such as a focus and select action) must be completed immediately after each other, they are added to the list as an ordered tuple. Lowest index is the first action.
+
+Upon recieving each message, BLAAC will try to handle output first. This is to minimise latency. Then, it will update the state of the program, and in the case of ":ext_BLAAC_select" may add items to a secondary queue of tasks and handle them.
+After this, BLAAC will execute the next message.
+
+To be able to send such messages, Input devices will need to be sent data such as grid layout and default dwell time. 
+They will also need to handle messages asking them to:
+    - stop sending messages (disable themselves)
+    - start sending messages
+    - toggle sending messages
+    - Stop altogether (releasing system resources)
+    - start
+    - reload configuration without restarting if possible.
+    
+
+### audioIO
+
+audioOutput(pykka.ThreadingActor)
 
 Attributes:
 
