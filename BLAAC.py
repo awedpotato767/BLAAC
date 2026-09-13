@@ -46,20 +46,63 @@ if __name__ == "__main__":
         with open(boards_dir+"manifest.json") as mff:
             # obf.load_manifest(mff)
             pass
-        AAC_board = obf.board("Boards/quick-core-60/board_1_416.obf")
+        AAC_board = obf.board("Boards/communikate-20/board_1_235.obf")
 
     inp = " "
+    focused_btn = None
+    focus_row = 0
+    focus_column = 0
+    focused_btn = AAC_board.grid[focus_row][focus_column]
+    grid_width = len(AAC_board.grid[0])
+    grid_height = len(AAC_board.grid)
+    print("initialised")
+    audio_feedback.say(f"This board is {grid_height} by {grid_width}. Focusing top left button {focused_btn.label}.", interrupt=False)
+    sentence = ""
     while inp != "q":
         print(AAC_board)
         inp = str(input(":"))
-
-        if len(inp) == 2 and inp.isnumeric():
-            selected_btn = AAC_board.grid[int(inp[1])-1][int(inp[0])-1]
-            if selected_btn.has_property("load_board"):
-                audio_feedback.say(selected_btn.vocalisation())
-                AAC_board = obf.board(boards_dir+ selected_btn.loads_board)
+        print(f'"{inp}"')
+        if len(inp) == 2 and ord(inp[0])-ord("a")<15 and ord(inp[1])-ord("a")<15 :
+            focus_row = ord(inp[0])-ord("a")
+            focus_column = ord(inp[1])-ord("a")
+            focused_btn = AAC_board.grid[focus_row][focus_column]
+            if focused_btn.has_property("load_board"):
+                audio_feedback.say(focused_btn.vocalisation()+ ": menu.")
             else:
-                speech.say(selected_btn.vocalisation())
+                audio_feedback.say(focused_btn.vocalisation())
+        elif inp == "s":
+            if focused_btn.has_property("load_board"):
+                audio_feedback.say("Entering board " + focused_btn.vocalisation())
+                AAC_board = obf.board(boards_dir+ focused_btn.loads_board)
+                focus_row = 0
+                focus_column = 0
+                focused_btn = AAC_board.grid[focus_row][focus_column]
+                grid_width = len(AAC_board.grid[0])
+                grid_height = len(AAC_board.grid)
+                audio_feedback.say("focusing button "+focused_btn.label, interrupt=False)
+            else:
+                speech.say(focused_btn.vocalisation())
+                sentence += focused_btn.vocalisation() + " "
+                AAC_board = obf.board("Boards/communikate-20/board_1_235.obf")
+        elif inp == "ss":
+            speech.say(sentence.rstrip()+".")
+            sentence = ""
+        elif inp == "ds":
+            sentence = ""
+        elif inp == "":
+            focus_column += 1
+            if focus_column > grid_width:
+                focus_row += 1
+                focus_column = 1
+            if focus_row > grid_height:
+                focus_row = 1
+            focused_btn = AAC_board.grid[focus_row][focus_column]
+
+            if focused_btn.has_property("load_board"):
+                audio_feedback.say(focused_btn.vocalisation()+ ": menu.")
+            else:
+                audio_feedback.say(focused_btn.vocalisation())
+            print(focused_btn.label)
         elif inp in speech.get_voices().get():
             speech.current_voice = inp
             audio_feedback.say("selected voice "+inp)
