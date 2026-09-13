@@ -5,8 +5,9 @@ import os
 import tomllib
 from random import choice
 import logging
-from src.audioHandler import *
-import src.obf as obf
+from audioO import *
+import obf
+import time
 
 #start logger
 logger = logging.getLogger(__name__)
@@ -26,16 +27,23 @@ with open("config/Global config.toml","rb") as conf_file:
 
 
 if __name__ == "__main__":
-    #initialise both audio channels
-    speech_handler = audioHandler.start(device_ID=global_config["startup"]["default_speaker"], temp=0.7, voice = global_config["tts"]["default_speaking_voice"])
-    speech = speech_handler.proxy()
+    ### initialise two audio channels
+    speech_actor = audioOutput.start(\
+        device_ID=global_config["startup"]["default_speaker"],\
+        default_voice = global_config["tts"]["default_speaking_voice"]\
+            )
+    speech = speech_actor.proxy()
 
-    audio_feedback_handler = audioHandler.start(device_ID=global_config["startup"]["default_headphones"], voice = global_config["tts"]["default_feedback_voice"], usually_interrupt=True)
-    audio_feedback = audio_feedback_handler.proxy()
+    #process any new voices then reload
+    speech.preprocess_voice_dir(excluded_voices = speech.get_voices().get()).get()
+    speech.load_voice_dir()
 
-    #TODO if audio devices are the same, do this
-    #    audio_feedback = speech
-
+    audio_feedback_actor = audioOutput.start(\
+        device_ID=global_config["startup"]["default_headphones"],\
+        default_voice = global_config["tts"]["default_feedback_voice"],  \
+        usually_interrupt=True\
+            )
+    audio_feedback = audio_feedback_actor.proxy()
 
     print(audio_feedback.say(choice(global_config["startup"]["welcome_messages"]), voice="chatty").get())
 
@@ -116,6 +124,7 @@ if __name__ == "__main__":
             speech.say(inp.removeprefix("s "))
         else:
             audio_feedback.say("Not a command.")
+
     #gracefully end the code
     sd.wait()
     pykka.ActorRegistry.stop_all()

@@ -1,7 +1,7 @@
 [startup]
 welcome_messages = ["welcome to B L A A C!", "Good luck with your conversation!", "Hey Sofiia, you've got this!"]
 default_speaker = "Ryzen"
-default_headphones=9
+default_headphones="PCM"
 
 [boards]
 home_board = "communikate-20"

@@ -42,9 +42,17 @@ with open("config/Global config.toml","rb") as conf_file:
 #                 into the model (acts as a cache).
 #             -> values are model states corresponding to each voice
 
-# functions
+# Methods:
+# __init__
+# load_voice_dir()
+# preprocess_voice_dir()
+# get_voices()
+# say()
 
-# Init:
+
+class audioOutput(pykka.ThreadingActor):
+
+# __init__: THIS IS A TIME EXPENSIVE OPERATION AND A MEMORY EXPENSIVE CLASS
 #
 #  actions:
 #    Creates a new instance of pocket-tts' 100k parameter model
@@ -72,7 +80,52 @@ with open("config/Global config.toml","rb") as conf_file:
 #  errors:
 #    TODO add more suitable error handling. Currently liable to raise ImportError a lot.
 
-# load_voice_dir:
+
+    def __init__(self,
+                 device_ID=None,
+                 default_voice=global_config["tts"]["default_speaking_voice"],
+                 model=None, temp=0.3, quant=False, usually_interrupt=False):
+
+        ### initialise actor code for pyKKA multithreading
+        super().__init__()
+
+        ### load TTS from pocket TTS
+        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant, eos_threshold=-4.0)
+        self._TTS_sample_rate = 24000
+
+
+        ### set up a dictionary for available voices for this TTS
+        #set up variable
+        self._voices = {}
+
+        #ensure voices dict is nonempty by adding a "default" entry.
+        try:
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(default_voice)
+        except FileNotFoundError:
+            logger.warning(f"Cannot find voice file '{voice}', continuing with prepackaged voice charles." )
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt("charles")
+        #FIXME get it to throw an ImportError and figure out how to handle that.
+
+        #use the default entry
+        self.current_voice = "default"
+        #load any saved voices
+        self.load_voice_dir()
+
+        ### initialise audio device
+        self.output_device = device_ID
+        self.output_channels = 2
+        self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        self._stream = None
+        self._interrupt = False
+        self.usually_interrupt = usually_interrupt
+        self.volume = 1.000
+
+
+        #set transform for upsampling
+        self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
+
+
+# load_voice_dir: AVERAGE VOICE SIZE IS 10-20MB. 100 voices -> >1GB. BE MINDFUL OF UNUSED VOICES
 #
 #  actions:
 #    attempts to cache all .safetensors voices from the given directory into _voices.
@@ -81,55 +134,6 @@ with open("config/Global config.toml","rb") as conf_file:
 #    dirpath: str
 #      - path to directory to search. Will be relative to the CWD, which should be the project root.
 
-# preprocess_voice_dir:
-#
-#  actions:
-#   Processes all "X.wav"-style files into a corresponding "cache/X.safetensors" file
-#    unless X is present in _voices
-#   NOTE: to reload all chache, simply run this file with an empty _voices dictionary
-#   NOTE 2: For performance reasons, it is advisble to load all voices in dirpath, preprocess, then load again.
-#
-#  parameters:
-#   see load_voice_dir()
-
-
-
-class audioHandler(pykka.ThreadingActor):
-
-    def __init__(self,
-                 device_ID=None,
-                 voice=global_config["tts"]["default_speaking_voice"],
-                 model=None, temp=0.5, quant=False, usually_interrupt=False):
-        #initialise actor code
-        super().__init__()
-
-        #load TTS
-        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant, eos_threshold=-4.0)
-        self._voices = {}
-        #ensure voices dict is nonempty.
-        # TODO gracefully continue on ImportError with suitable warning using default voice "charles"
-        try:
-            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(voice)
-        except FileNotFoundError:
-            logger.warning(f"Cannot find voice file '{voice}', continuing with prepackaged voice charles." )
-            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt("charles")
-        self.current_voice = "default"
-
-        self.output_device = device_ID
-        self.output_channels = 2
-        self._TTS_sample_rate = 24000
-        self._output_sample_rate = 48000
-        #set transform for upsampling
-        self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
-        self._stream = None
-        self._interrupt = False
-        self.usually_interrupt = usually_interrupt
-        self.volume = 1.000
-
-        #load voices
-        self.load_voice_dir()
-        self.preprocess_voice_dir()
-        self.load_voice_dir()
 
     def load_voice_dir(self, dirpath="TTS voices/"):
         for fname in os.listdir(dirpath):
@@ -144,28 +148,57 @@ class audioHandler(pykka.ThreadingActor):
             except FileNotFoundError:
                 logger.warning("could not load path '"+dirpath+"cache/'")
 
-    def preprocess_voice_dir(self, dirpath="TTS voices/"):
+# preprocess_voice_dir: THIS IS A TIME EXPENSIVE OPERATION.
+#
+#  actions:
+#   Processes all "X.wav"-style files into a corresponding "cache/X.safetensors" file
+#    unless X is present in _voices
+#   NOTE: to reload all chache, simply run this file with an empty _voices dictionary
+#   NOTE 2: For performance reasons, it is advisble to load all voices in dirpath, preprocess, then load again.
+#
+#  parameters:
+#   dirpath -> directory containing all files to load
+#   excluded_voices -> a list of strings (such as "default", "chatty", "news") containing voies to avoid loading.
+
+
+
+    def preprocess_voice_dir(self, dirpath="TTS voices/", excluded_voices=[]):
         for fname in os.listdir(dirpath):
             name, ext = os.path.splitext(fname.lower())
             # preprocesses every wav file that has not been loaded yet.
-            if ext == ".wav" and name not in self._voices.keys():
+            if ext == ".wav" and name not in excluded_voices:
                 print("preprocessing "+fname.lower())
                 export_model_state(self._TTS_model.get_state_for_audio_prompt(dirpath+fname),
                                    dirpath+"cache/"+name+".safetensors")
+# get_voices:
+# a little helper function that retrieves a user friendly list for all
+# acceptable values of "current_voice"
+
     def get_voices(self):
         return list(self._voices.keys())
 
+# say:
+#
+#  actions:
+#   Generates TTS speech from the given text, and sends it to a given audio device.
+#
+#  parameters:
+#   text - what to say
+#   volume --> how to say it
+#   voice  -^
+#   interrupt - interrupt the previous speech output. NB cannot interrupt two outputs back at present.
     def say(self, text, voice=None, volume=None, interrupt=None):
-        if voice == None:
+        #use class defaults for unspecified parameters
+        if voice is None:
             voice = self.current_voice
-        if interrupt == None:
+        if interrupt is None:
             interrupt = self.usually_interrupt
-        if volume == None:
+        if volume is None:
             volume = self.volume
 
         #preprocess text to ensure it works
-        text = text.lstrip(" ")+"!"
-        #fix short words
+        text = text.lstrip(" ")
+        #hotfix for short words
         padding = 5
         if len(text) < 7:
             padding = 8
@@ -214,9 +247,13 @@ class audioHandler(pykka.ThreadingActor):
         while self._stream != None:
             time.sleep(0.1)
         self._interrupt = False
-
-        self._stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
-        self._stream.start()
+        try:
+            self._stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
+            self._stream.start()
+        except PortAudioError as e:
+            logger.error(f"could not say {text} on {self.output_device}: {e}")
+            print(f"could not say {text} on {self.output_device}: {e}")
+            return "could not start playing audio"
         return "started playing"
 
     def play(audio, volume = None, interrupt = None):
