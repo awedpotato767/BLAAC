@@ -1,7 +1,7 @@
 # BLAAC
 ### A custom key chording-based AAC written in Python.
 
-NOTICE: THIS IS NOT CURRENTLY USABLE.
+NOTICE: This is currently at a tech demo stage. There is a major refactor in the works.
 
 ## Goals
 
