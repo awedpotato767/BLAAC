@@ -38,10 +38,16 @@ with open("config/Global config.toml","rb") as conf_file:
 # _TTS_model -> an instance of TTSModel from pocketTTS.
 #             -> Very bulky object. Don't pass around.
 #
+# _TTS_sample_rate -> the sample rate of any generated audio
+#
 # _voices    -> dict() with keys labelling different voices loaded
 #                 into the model (acts as a cache).
 #             -> values are model states corresponding to each voice
-
+#
+# current_voice -> the voice that this actor will say TTS things with
+#
+#
+#
 # Methods:
 # __init__
 # load_voice_dir()
@@ -85,33 +91,16 @@ class audioOutput(pykka.ThreadingActor):
                  device_ID=None,
                  default_voice=global_config["tts"]["default_speaking_voice"],
                  model=None, temp=0.3, quant=False, usually_interrupt=False):
-
-        ### initialise actor code for pyKKA multithreading
         super().__init__()
+        #take in parameters for use in on_start()
+        self._model = model
+        self._quant = quant
+        self._temp = temp
+        self._default_voice = default_voice
 
-        ### load TTS from pocket TTS
-        self._TTS_model = TTSModel.load_model(language=model, temp=float(temp), quantize=quant, eos_threshold=-4.0)
-        self._TTS_sample_rate = 24000
-
-
-        ### set up a dictionary for available voices for this TTS
-        #set up variable
-        self._voices = {}
-
-        #ensure voices dict is nonempty by adding a "default" entry.
-        try:
-            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(default_voice)
-        except FileNotFoundError:
-            logger.warning(f"Cannot find voice file '{voice}', continuing with prepackaged voice charles." )
-            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt("charles")
-        #FIXME get it to throw an ImportError and figure out how to handle that.
-
-        #use the default entry
-        self.current_voice = "default"
-        #load any saved voices
-        self.load_voice_dir()
 
         ### initialise audio device
+        #TODO add proper error handling, support mono devices
         self.output_device = device_ID
         self.output_channels = 2
         self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
@@ -121,8 +110,39 @@ class audioOutput(pykka.ThreadingActor):
         self.volume = 1.000
 
 
+    def on_start(self):
+        # where the heavy stuff goes to speed up the main thread.
+        ### load TTS from pocket TTS
+
+
+        self._TTS_model = TTSModel.load_model(language=self._model, temp=float(self._temp), quantize=self._quant, eos_threshold=-4.0)
+
+        self._TTS_sample_rate = 24000
+
+
+        ### set up a dictionary for available voices for this TTS
+        #set up variable
+        self._voices = {}
+
+        #ensure voices dict is nonempty by adding a "default" entry.
+        try:
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt(self._default_voice)
+        except FileNotFoundError:
+            logger.warning(f"Cannot find voice file '{self._default_voice}', continuing with prepackaged voice charles." )
+            self._voices["default"] = self._TTS_model.get_state_for_audio_prompt("charles")
+        #FIXME get it to throw an ImportError and figure out how to handle that.
+
+
+        #use the default entry
+        self.current_voice = "default"
+        #load any saved voices
+        self.load_voice_dir()
+
         #set transform for upsampling
         self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
+
+    def on_failure(self, exception_type, exception_value, traceback):
+        print(exception_type)
 
 
 # load_voice_dir: AVERAGE VOICE SIZE IS 10-20MB. 100 voices -> >1GB. BE MINDFUL OF UNUSED VOICES
@@ -217,26 +237,32 @@ class audioOutput(pykka.ThreadingActor):
             self._stream = None
             finished = True
 
-        buf = self._transform(next(audio_generator)*volume).numpy()
+        bufa = self._transform(next(audio_generator)*volume).numpy()
         if self.output_channels == 2:
-            buf = numpy.stack((buf,buf),axis=1)
+            bufa = numpy.stack((bufa,bufa),axis=1)
+        bufb = None
         def callback(outdata, frames, time, status):
             nonlocal current_frame
-            nonlocal buf
+            nonlocal bufa
+            nonlocal bufb
             if status:
                 print(status)
-            chunksize = min(len(buf) - current_frame, frames)
-            outdata[:chunksize] = buf[current_frame:current_frame + chunksize]
-            if chunksize < frames:
+            chunksize = min(len(bufa) - current_frame, frames)
+            if current_frame<=frames:
                 try:
-                    buf = self._transform(next(audio_generator)*volume).numpy()
+                    bufb = self._transform(next(audio_generator)*volume).numpy()
                     if self.output_channels == 2:
-                        buf = numpy.stack((buf,buf),axis=1)
-                    outdata[chunksize:] = buf[:frames-chunksize]
-                    current_frame = frames-2*chunksize
+                        bufb = numpy.stack((bufb,bufb),axis=1)
                 except StopIteration:
                     outdata[chunksize:] = 0
                     raise sd.CallbackStop()
+            outdata[:chunksize] = bufa[current_frame:current_frame + chunksize]
+            if chunksize < frames:
+                bufa = bufb.copy()
+                outdata[chunksize:] = bufa[:frames-chunksize]
+                current_frame = frames-2*chunksize
+
+
             if self._interrupt:
                 outdata.fill(0)
                 raise sd.CallbackStop()

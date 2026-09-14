@@ -57,24 +57,20 @@ class button:
 
 class board:
     def __init__(self, path_or_url):
-        #TODO support URLs
         match path_or_url:
             case "http*":
+                #download the file
                 with urllib.request.urlopen(path_or_url) as fp:
                     self._data = js.load(fp)
                     contents = fp.read()
+                #save a local copy
                 with open(f"{self._boardroot}cache/{self._data["id"]}.obf", "w") as obffile:
                     obffile.write(contents)
-            case "data*":
-                #this should not happen
-                logger.warning("DATA URL DETECTED FOR BOARD")
-                with urllib.DataHandler.data_open(path_or_url) as fp:
-                    self._data = js.load(fp)
             case _:
-                #last ditch effort
+                #assume it is a file.
+                #This code will raise hell if it isn't, but that should be caught downstream by whichever numpty has made this mistake.
                 with open(path_or_url) as fp:
                     self._data = js.load(fp)
-
         self.buttons = {}
         for btn in self._data["buttons"]:
             self.buttons[str(btn["id"])] = button(btn)
@@ -102,8 +98,28 @@ class board:
                 retval += f'{btn_rep:<{colwidth}}'
         return retval
 
-def load_obz(dirpath):
-    raise NotImplementedError
-    return root_board
+def load_obf_collection(directory):
+    if not directory.endswith("/"):
+        directory += "/"
+
+    ### find the manifest
+    try:
+        with open(directory+"manifest.json","r") as mf:
+            mf_data = js.load(mf)
+    except FileNotFoundError as e:
+        logger.warning(f"Could not load board: {e}")
+        return None, None, None
+
+    assert mf_data["format"] == "open-board-0.1"
+
+    ### load sound and images
+    images = {}
+    sounds = {}
+
+    ### decode the root board
+    root_board = board(directory+mf_data["root"])
+
+    ###
+    return root_board, images, sounds
 
 

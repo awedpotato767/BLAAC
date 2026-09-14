@@ -3,5 +3,10 @@ TTS voices/*
 !TTS voices/.gitkeep
 !TTS voices/news.safetensors
 !TTS voices/magnus.safetensors
+*.wav
+*.mp3
+*.mp4
+*.ogg
+*.flac
 
 .venv/

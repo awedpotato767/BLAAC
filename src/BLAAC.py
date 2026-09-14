@@ -6,7 +6,7 @@ import tomllib
 from random import choice
 import logging
 from audioO import *
-import obf
+import obfIO as obf
 import time
 
 #start logger
@@ -26,7 +26,10 @@ with open("config/Global config.toml","rb") as conf_file:
     global_config = tomllib.load(conf_file)
 
 
+
 if __name__ == "__main__":
+    ##### Startup
+
     ### initialise two audio channels
     speech_actor = audioOutput.start(\
         device_ID=global_config["startup"]["default_speaker"],\
@@ -45,16 +48,27 @@ if __name__ == "__main__":
             )
     audio_feedback = audio_feedback_actor.proxy()
 
-    print(audio_feedback.say(choice(global_config["startup"]["welcome_messages"]), voice="chatty").get())
+    #Once the TTS is loaded, say a welcome message.
+    #This serves the dual purpose of testing the AAC system for errors, and providing feedback to help non-visual users debug the program.
 
-    #test code
-    if f"{global_config["boards"]["home_board"]}.obf" not in os.listdir("Boards/"):
+    print(audio_feedback.say(choice(global_config["startup"]["welcome_messages"])).get())
+
+
+    ### load the home board on startup.
+    # Since this parameter may be a name or a full path, we have to overspecify it somewhat.
+    if global_config["boards"]["home_board"].startswith("http") or os.path.isfile(global_config["boards"]["home_board"]):
+        AAC_board = board(global_config["boards"]["home_board"])
+
+    elif os.path.isdir(f"Boards/{global_config["boards"]["home_board"]}/"):
         boards_dir = f"Boards/{global_config["boards"]["home_board"]}/"
-        #FIXME add error handling
-        with open(boards_dir+"manifest.json") as mff:
-            # obf.load_manifest(mff)
-            pass
-        AAC_board = obf.board("Boards/communikate-20/board_1_235.obf")
+        AAC_board, images, sounds = obf.load_obf_collection(boards_dir)
+
+    elif os.path.isfile(f"Boards/{global_config["boards"]["home_board"]}.obf"):
+        AAC_board = board(f"Boards/{global_config["boards"]["home_board"]}.obf")
+    else:
+        audio_feedback.say(f"Could not find home board {global_config["boards"]["home_board"]}. Aborting.").get()
+        raise FileNotFoundError(f"Could not find home board {global_config["boards"]["home_board"]}. Aborting.")
+
 
     inp = " "
     focused_btn = None
@@ -64,8 +78,10 @@ if __name__ == "__main__":
     grid_width = len(AAC_board.grid[0])
     grid_height = len(AAC_board.grid)
     print("initialised")
-    audio_feedback.say(f"This board is {grid_height} by {grid_width}. Focusing top left button {focused_btn.label}.", interrupt=False)
+
+    audio_feedback.say(f"This board is {grid_height} by {grid_width}. Focusing top left button: {focused_btn.label}.", interrupt=False)
     sentence = ""
+
     while inp != "q":
         print(AAC_board)
         inp = str(input(":"))
@@ -124,7 +140,6 @@ if __name__ == "__main__":
             speech.say(inp.removeprefix("s "))
         else:
             audio_feedback.say("Not a command.")
-
     #gracefully end the code
     sd.wait()
     pykka.ActorRegistry.stop_all()

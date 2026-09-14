@@ -1,5 +1,5 @@
 [startup]
-welcome_messages = ["welcome to B L A A C!", "Good luck with your conversation!", "Hey Sofiia, you've got this!"]
+welcome_messages = ["welcome to B L A A C!", "Good luck with your conversation!", "Hey You, you've got this!"]
 default_speaker = "Ryzen"
 default_headphones="PCM"
 
@@ -7,8 +7,8 @@ default_headphones="PCM"
 home_board = "communikate-20"
 
 [tts]
-default_speaking_voice = 'TTS voices/cache/rambler.safetensors'
-default_feedback_voice = 'TTS voices/chatty.safetensors'
+default_speaking_voice = 'Alba'
+default_feedback_voice = 'Charles'
 #warning: setting this value above 1 is possible but not recommended.
 expressiveness = 0.3
 prioritise_tts_over_generic_audio = false
