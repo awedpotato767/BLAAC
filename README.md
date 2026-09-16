@@ -22,7 +22,7 @@ This project has not had any real-world testing yet, so any volunteers are welco
 ## Installation
 
 This is currently alpha software, so these  are liable to change.
-All python files are designed to be run from the project root. They will raise an error if fun from elsewhere.
+All python files are designed to be run from the project root. They will raise an error if run from elsewhere.
 
 ### linux
 
