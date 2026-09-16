@@ -212,14 +212,14 @@ These are in the style of openAAC's "action" attributes.
     - ":ext_BLAAC_focus_btn_<row>_<column>"
     - ":ext_BLAAC_select"
     - ":ext_BLAAC_hide_btn_" #IN FUTURE 
-    - ":ext_BLAAC_focus_<l/r/u/d><n/l/p/d>"
+    - ":ext_BLAAC_focus_:<l/r/u/d><n/l/p/d>"
         - lrud indicates direction and nlpd indicates wrapping - "None", "Loop", "Page-like" (english sentence organisation), and "Default".
     - ":ext_BLAAC_voice_<voice>"
     - ":ext_BLAAC_volume_<vm>"
     - ":ext_BLAAC_speak_screen"
     - ":ext_BLAAC_speak_sentence"
     - ":ext_BLAAC_load_board_<path_or_url>"
-    - "+<something>" 
+    - "+<something>"
     - ":space"
     - ":home"
     - ":clear"

@@ -9,8 +9,8 @@ default_headphones="PCM"
 home_board = "communikate-20"
 
 [tts]
-default_speaking_voice = 'alba'
-default_feedback_voice = 'charles'
+default_speaking_voice = 'TTS voices/news.safetensors'
+default_feedback_voice = 'TTS voices/news.safetensors'
 #warning: setting this value above 1 is possible but not recommended.
 expressiveness = 0.3
 #Setting the below value to true means that TTS phrases specific to your current voice will take priority over audio clips that are not specific to your current voice.

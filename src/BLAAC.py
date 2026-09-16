@@ -6,11 +6,13 @@ import tomllib
 from random import choice
 import logging
 from audioO import *
+from keyboardI import *
+from stateHandler import *
 import obfIO as obf
 import time
 
 #start logger
-logging.basicConfig(filename='logs/lastrun.log', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(filename='logs/lastrun.log', encoding='utf-8', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 #check that this module is running in the root directory
@@ -60,7 +62,7 @@ if __name__ == "__main__":
     #Once the TTS is loaded, say a welcome message.
     #This serves the dual purpose of testing the AAC system for errors, and providing feedback to help non-visual users debug the program.
 
-    print(audio_feedback.say(choice(global_config["startup"]["welcome_messages"])).get())
+    logger.debug(audio_feedback.say(choice(global_config["startup"]["welcome_messages"])).get())
 
 
     ### load the home board on startup.
@@ -78,6 +80,14 @@ if __name__ == "__main__":
         audio_feedback.say(f"Could not find home board {global_config["boards"]["home_board"]}. Aborting.").get()
         raise FileNotFoundError(f"Could not find home board {global_config["boards"]["home_board"]}. Aborting.")
 
+    inp_actors = []
+    out_actors = {"speech": speech_actor, "audio feedback": audio_feedback_actor, "multiline_text":None}
+    state_handler_actor = stateHandler.start(inp_actors,out_actors, AAC_board)
+    state_handler = state_handler_actor.proxy()
+
+    keyboard_actor = keyboardInput.start(state_handler)
+
+    state_handler.add_inp_actors([keyboard_actor])
 
     inp = " "
     focused_btn = None

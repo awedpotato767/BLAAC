@@ -111,12 +111,14 @@ class audioOutput(pykka.ThreadingActor):
         self.output_device = device_ID
         self.output_channels = 2
         #FIXME might crash if no audio device connected
-        try:
-            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
-        except ValueError:
-            logger.error("invalid device "+ self.output_device+ ", using default.")
-            self.output_device = sd.default.device[1]
-            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        # try:
+        #     self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        # except ValueError as e:
+        #     logger.error(e)
+        #     logger.error("invalid device "+ self.output_device+ ", using default.")
+        #     self.output_device = sd.default.device[1]
+        #     self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
         self._stream = None
         self._interrupt = False
         self.usually_interrupt = usually_interrupt
@@ -127,8 +129,7 @@ class audioOutput(pykka.ThreadingActor):
         # where the heavy stuff goes to speed up the main thread.
         ### load TTS from pocket TTS
 
-
-        self._TTS_model = TTSModel.load_model(language=self._model, temp=float(self._temp), quantize=self._quant, eos_threshold=-4.0)
+        self._TTS_model = TTSModel.load_model(language = self._model, temp=float(self._temp), quantize=self._quant, eos_threshold=-4.0)
 
         self._TTS_sample_rate = 24000
 
@@ -155,7 +156,8 @@ class audioOutput(pykka.ThreadingActor):
         self._transform = transforms.Resample(self._TTS_sample_rate, self._output_sample_rate)
 
     def on_failure(self, exception_type, exception_value, traceback):
-        print(exception_type)
+        logger.critical(exception_type + exception_value)
+
 
 
 # load_voice_dir: AVERAGE VOICE SIZE IS 10-20MB. 100 voices -> >1GB. BE MINDFUL OF UNUSED VOICES
@@ -175,11 +177,8 @@ class audioOutput(pykka.ThreadingActor):
             if ext == ".safetensors" and name != "default":
                 self._voices[name]=\
                     self._TTS_model.get_state_for_audio_prompt(dirpath+fname)
-        if not dirpath.endswith("cache/"):
-            try:
-                self.load_voice_dir(dirpath+"cache/")
-            except FileNotFoundError:
-                logger.warning("could not load path '"+dirpath+"cache/'")
+        if not dirpath.endswith("cache/") and os.path.isdir(dirpath+"cache/"):
+            self.load_voice_dir(dirpath+"cache/")
 
 # preprocess_voice_dir: THIS IS A TIME EXPENSIVE OPERATION.
 #
