@@ -111,14 +111,13 @@ class audioOutput(pykka.ThreadingActor):
         self.output_device = device_ID
         self.output_channels = 2
         #FIXME might crash if no audio device connected
-        self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
-        # try:
-        #     self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
-        # except ValueError as e:
-        #     logger.error(e)
-        #     logger.error("invalid device "+ self.output_device+ ", using default.")
-        #     self.output_device = sd.default.device[1]
-        #     self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        try:
+            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        except ValueError as e:
+            logger.error(e)
+            logger.error("invalid device "+ self.output_device+ ", using default.")
+            self.output_device = sd.default.device[1]
+            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
         self._stream = None
         self._interrupt = False
         self.usually_interrupt = usually_interrupt
