@@ -1,7 +1,9 @@
+# An autocreated config file. To reset to defaults, delete config.toml
+
 [startup]
 welcome_messages = ["welcome to B L A A C!", "Good luck with your conversation!", "Hey You, you've got this!"]
 default_speaker = "Ryzen"
-default_headphones="PCssM"
+default_headphones="PCM"
 
 [boards]
 home_board = "communikate-20"
@@ -11,4 +13,6 @@ default_speaking_voice = 'alba'
 default_feedback_voice = 'charles'
 #warning: setting this value above 1 is possible but not recommended.
 expressiveness = 0.3
+#Setting the below value to true means that TTS phrases specific to your current voice will take priority over audio clips that are not specific to your current voice.
+#Default: false
 prioritise_tts_over_generic_audio = false
