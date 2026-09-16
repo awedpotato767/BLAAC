@@ -10,6 +10,7 @@ import obfIO as obf
 import time
 
 #start logger
+logging.basicConfig(filename='logs/lastrun.log', encoding='utf-8', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 #check that this module is running in the root directory
@@ -29,7 +30,7 @@ with open("config/Global config.toml","rb") as conf_file:
 
 if __name__ == "__main__":
     ##### Startup
-
+    logger.info("BLAAC is starting up")
     ### initialise two audio channels
     speech_actor = audioOutput.start(\
         device_ID=global_config["startup"]["default_speaker"],\
@@ -77,7 +78,7 @@ if __name__ == "__main__":
     focused_btn = AAC_board.grid[focus_row][focus_column]
     grid_width = len(AAC_board.grid[0])
     grid_height = len(AAC_board.grid)
-    print("initialised")
+
 
     audio_feedback.say(f"This board is {grid_height} by {grid_width}. Focusing top left button: {focused_btn.label}.", interrupt=False)
     sentence = ""
@@ -141,5 +142,7 @@ if __name__ == "__main__":
         else:
             audio_feedback.say("Not a command.")
     #gracefully end the code
+
+    logger.info("BLAAC is quitting")
     sd.wait()
     pykka.ActorRegistry.stop_all()

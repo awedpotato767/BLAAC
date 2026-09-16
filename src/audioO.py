@@ -103,7 +103,13 @@ class audioOutput(pykka.ThreadingActor):
         #TODO add proper error handling, support mono devices
         self.output_device = device_ID
         self.output_channels = 2
-        self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        #FIXME might crash if no audio device connected
+        try:
+            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
+        except ValueError:
+            logger.error("invalid device "+ self.output_device+ ", using default.")
+            self.output_device = sd.default.device[1]
+            self._output_sample_rate = sd.query_devices(device = self.output_device)["default_samplerate"]
         self._stream = None
         self._interrupt = False
         self.usually_interrupt = usually_interrupt
@@ -183,13 +189,15 @@ class audioOutput(pykka.ThreadingActor):
 
 
     def preprocess_voice_dir(self, dirpath="TTS voices/", excluded_voices=[]):
+        logger.info("preproccessing voices in "+dirpath)
         for fname in os.listdir(dirpath):
             name, ext = os.path.splitext(fname.lower())
             # preprocesses every wav file that has not been loaded yet.
             if ext == ".wav" and name not in excluded_voices:
-                print("preprocessing "+fname.lower())
+                logger.info("preprocessing "+fname.lower())
                 export_model_state(self._TTS_model.get_state_for_audio_prompt(dirpath+fname),
                                    dirpath+"cache/"+name+".safetensors")
+        logger.info("preproccessing done")
 # get_voices:
 # a little helper function that retrieves a user friendly list for all
 # acceptable values of "current_voice"
@@ -276,9 +284,8 @@ class audioOutput(pykka.ThreadingActor):
         try:
             self._stream = sd.OutputStream(samplerate= self._output_sample_rate, device=self.output_device, channels=self.output_channels, callback=callback, finished_callback=set_finished)
             self._stream.start()
-        except PortAudioError as e:
-            logger.error(f"could not say {text} on {self.output_device}: {e}")
-            print(f"could not say {text} on {self.output_device}: {e}")
+        except Exception as e:
+            logger.error(f"could not say {text} on {self.output_device}: {e}\n")
             return "could not start playing audio"
         return "started playing"
 

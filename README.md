@@ -30,19 +30,23 @@ requirements:
 
 - python
 - git
+- a huggingface login that has access to pocket-tts
 
-Alternately, you can extract the code manually, but this makes updates harder.
+Run these commands:
 
-    > git clone git@github.com:awedpotato767/BLAAC.git
-    > cd BLAAC/
-    > ./src/venv_setup_linux.sh
+    > #Download the code
+    > git clone git@github.com:awedpotato767/BLAAC.git && cd BLAAC/
+    > #run the insallation script
+    > ./installation.sh
+    > #log in to get access to the model
+    > uvx hf auth login
     
 To run the code:
-
-    > #run once per session
-    > cd BLAAC/
-    > source .venv/bin/activate
-    > python BLAAC.py
+    
+    > cd BLAAC
+    > ./BLAAC.sh
+    
+I recommend turning off your screen reader when running this code, since BLAAC has its own audio feedback system!
     
 ### MacOS/Windows
 
