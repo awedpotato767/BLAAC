@@ -22,9 +22,17 @@ try:
 except FileNotFoundError:
     raise FileNotFoundError("Cannot find README.md. Please run this code from the BLAAC root directory.")
 
+
 #config file reading
-with open("config/Global config.toml","rb") as conf_file:
-    global_config = tomllib.load(conf_file)
+if os.path.isfile("config/config.toml"):
+    with open("config/config.toml","rb") as conf_file:
+        global_config = tomllib.load(conf_file)
+else:
+    with open("config/sample_config.toml","rb") as conf_file:
+        global_config = tomllib.load(conf_file)
+        conf_data = conf_file.read()
+    with open("config/config.toml", "w") as cf:
+        cf.write(conf_data)
 
 
 

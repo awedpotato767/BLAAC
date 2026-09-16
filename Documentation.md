@@ -82,7 +82,7 @@ Audacity is a free tool that can be used for recording and editing audio on PC.
 
 If you are able to speak, saying "The quick brown fox jumps over the lazy dog" 
 and then some phrases you would normally say in that voice is a good idea 
-to start with, but do experiment.
+to start with, but do experiment. Reading news articles works well.
 
 If you are not, try to gather any audio clips that sound like the voice you want 
 and splice them together into a 30 second long clip. It doesn't all have to be you,
@@ -104,6 +104,8 @@ Then the next time I start BLAAC, I will be able to select that voice.
 After adding new voices, BLAAC will cache each of them to allow you to switch
 between them very quickly. This process takes about 5 seconds per voice. 
 These cached voices can be found in the chache subdirectory.
+
+Note: "default" is a reserved name. BLAAC will not detect any voice called default.
 
 #### renaming/deleting/changing voices
 If you make any changes to the audio file, 

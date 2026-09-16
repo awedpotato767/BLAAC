@@ -16,3 +16,7 @@ logs/*
 
 .venv/*
 __pycache__/*
+
+config/config.toml
+
+*.kate-swp
