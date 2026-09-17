@@ -3,15 +3,14 @@ import os
 import tomllib
 
 #config file reading
-if os.path.isfile("config/config.toml"):
-    with open("config/config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
-else:
-    with open("config/sample_config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
+if not os.path.isfile("config/config.toml"):
+    with open("config/sample_config.toml","r") as conf_file:
         conf_data = conf_file.read()
     with open("config/config.toml", "w") as cf:
         cf.write(str(conf_data))
+
+with open("config/config.toml","rb") as conf_file:
+    global_config = tomllib.load(conf_file)
 
 # actionHandler - the main coordinating thread in BLAAC.
 # Most things touch this at some point.

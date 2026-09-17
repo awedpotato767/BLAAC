@@ -24,17 +24,15 @@ except FileNotFoundError:
     raise FileNotFoundError("Cannot find README.md. Please run this code from the BLAAC root directory.")
 
 
-
 #config file reading
-if os.path.isfile("config/config.toml"):
-    with open("config/config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
-else:
-    with open("config/sample_config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
+if not os.path.isfile("config/config.toml"):
+    with open("config/sample_config.toml","r") as conf_file:
         conf_data = conf_file.read()
     with open("config/config.toml", "w") as cf:
         cf.write(str(conf_data))
+
+with open("config/config.toml","rb") as conf_file:
+    global_config = tomllib.load(conf_file)
 
 #                                                             #
 # Actor for TTS generation and wav file output to one device  #
