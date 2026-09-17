@@ -35,7 +35,7 @@ requirements:
 Run these commands:
 
     #Download the code
-    git clone https://github.com/awedpotato767/BLAAC.git && cd BLAAC/
+    git clone https://github.com/awedpotato767/BLAAC.git > download.log && cd BLAAC/ && mv ../download.log logs/download.log
     #run the insallation script
     ./install.sh
     
