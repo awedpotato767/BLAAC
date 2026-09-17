@@ -38,8 +38,6 @@ Run these commands:
     git clone https://github.com/awedpotato767/BLAAC.git && cd BLAAC/
     #run the insallation script
     ./install.sh
-    #log in to get access to the model
-    uvx hf auth login
     
 To run the code:
     
