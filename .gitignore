@@ -14,6 +14,11 @@ logs/*
 *.ogg
 *.flac
 
+Boards/*
+!Boards/communikate-20
+!Boards/lots of stuff
+!Boards/quick-core-60
+
 .venv/*
 src/__pycache__/*
 
