@@ -41,8 +41,7 @@ Run these commands:
     
 To run the code:
     
-    > cd BLAAC
-    > ./BLAAC.sh
+    ./BLAAC.sh
     
 I recommend turning off your screen reader when running this code, since BLAAC has its own audio feedback system!
     
