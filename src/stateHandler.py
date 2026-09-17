@@ -11,7 +11,7 @@ else:
         global_config = tomllib.load(conf_file)
         conf_data = conf_file.read()
     with open("config/config.toml", "w") as cf:
-        cf.write(conf_data)
+        cf.write(str(conf_data))
 
 # actionHandler - the main coordinating thread in BLAAC.
 # Most things touch this at some point.
