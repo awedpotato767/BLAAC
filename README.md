@@ -34,12 +34,12 @@ requirements:
 
 Run these commands:
 
-    > #Download the code
-    > git clone https://github.com/awedpotato767/BLAAC.git && cd BLAAC/
-    > #run the insallation script
-    > ./installation.sh
-    > #log in to get access to the model
-    > uvx hf auth login
+    #Download the code
+    git clone https://github.com/awedpotato767/BLAAC.git && cd BLAAC/
+    #run the insallation script
+    ./install.sh
+    #log in to get access to the model
+    uvx hf auth login
     
 To run the code:
     
