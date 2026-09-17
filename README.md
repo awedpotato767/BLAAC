@@ -35,7 +35,7 @@ requirements:
 Run these commands:
 
     > #Download the code
-    > git clone git@github.com:awedpotato767/BLAAC.git && cd BLAAC/
+    > git clone https://github.com/awedpotato767/BLAAC.git && cd BLAAC/
     > #run the insallation script
     > ./installation.sh
     > #log in to get access to the model
