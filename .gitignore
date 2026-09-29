@@ -1,9 +1,9 @@
 #ignore voices for privacy reasons
-TTS voices/*
-!TTS voices/.gitkeep
-!TTS voices/cache/.gitkeep
-!TTS voices/news.safetensors
-!TTS voices/magnus.safetensors
+tts_voices/*
+!tts_voices/.gitkeep
+!tts_voices/cache/.gitkeep
+!tts_voices/news.safetensors
+!tts_voices/magnus.safetensors
 
 logs/*
 !logs/.gitkeep
@@ -14,10 +14,10 @@ logs/*
 *.ogg
 *.flac
 
-Boards/*
-!Boards/communikate-20
-!Boards/lots of stuff
-!Boards/quick-core-60
+boards/*
+!boards/communikate-20
+!boards/lots of stuff
+!boards/quick-core-60
 
 .venv/*
 src/__pycache__/*
@@ -27,3 +27,10 @@ config/config.toml
 *.kate-swp
 
 src/Model setup/*
+.config
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+*.lock

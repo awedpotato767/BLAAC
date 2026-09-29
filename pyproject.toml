@@ -1,0 +1,56 @@
+[project]
+name = "BLAAC"
+version = "0.1.0"
+description = "A custom key chording-based AAC written in Python."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "numpy>=2.5.2",
+    "pocket-tts>=3.0.2",
+    "pykka>=4.4.2",
+    "python-multipart>=0.0.32",
+    "python-xlib>=0.33",
+    "sounddevice>=0.5.6",
+    "soundfile>=0.14.0",
+    "tomli-w>=1.2.0",
+    "torch>=2.13.0",
+    "torchaudio>=2.11.0",
+    "uvicorn>=0.52.4",
+]
+
+[project.scripts]
+blaac = "src.main:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu" },
+]
+torchaudio = [
+  { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
