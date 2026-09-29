@@ -1,35 +1,25 @@
 import json as js
+import logging
 import os
 import tomllib
-import logging
 import urllib
 
-#start logger
+# start logger
 logger = logging.getLogger(__name__)
 
-#check that this module is running in the root directory
-#and check for the license text at the same time.
-try:
-    with open("README.md") as readme:
-        if "This code is released under the CC BY-SA license." not in readme.read():
-            raise EOFError("Cannot find license text in README.md")
-except FileNotFoundError:
-    raise FileNotFoundError("Cannot find README.md. Please run this code from the BLAAC root directory.")
+# check that this module is running in the root directory
+# # and check for the license text at the same time.
+# try:
+#     with open("README.md") as readme:
+#         if "This code is released under the CC BY-SA license." not in readme.read():
+#             raise EOFError("Cannot find license text in README.md")
+# except FileNotFoundError:
+#     raise FileNotFoundError(
+#         "Cannot find README.md. Please run this code from the BLAAC root directory."
+#     )
 
 
-
-#config file reading
-if os.path.isfile("config/config.toml"):
-    with open("config/config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
-else:
-    with open("config/sample_config.toml","rb") as conf_file:
-        global_config = tomllib.load(conf_file)
-        conf_data = conf_file.read()
-    with open("config/config.toml", "w") as cf:
-        cf.write(conf_data)
-
-class button:
+class Button:
     def __init__(self, button_dict):
         self.ID = str(button_dict["id"])
         self.label = button_dict["label"]
@@ -41,7 +31,7 @@ class button:
                 self.loads_board = self._data["load_board"]["path"]
             else:
                 raise NotImplementedError
-            #TODO support URLs
+            # TODO support URLs
 
     def __repr__(self):
         retval = self.label
@@ -49,38 +39,38 @@ class button:
             retval += " *"
         return retval
 
-    #check if a certain property is defined.
+    # check if a certain property is defined.
     def has_property(self, _property):
         return _property in self._data.keys()
 
-
-    def vocalisation(self, voice = None):
-        #TODO add custom voices
+    def vocalisation(self, voice=None):
+        # TODO add custom voices
         if "vocalisation" in self._data.keys():
             return self._data["vocalisation"]
         return self.label
 
 
-
-class board:
+class Board:
     def __init__(self, path_or_url):
         match path_or_url:
             case "http*":
-                #download the file
+                # download the file
                 with urllib.request.urlopen(path_or_url) as fp:
                     self._data = js.load(fp)
                     contents = fp.read()
-                #save a local copy
-                with open(f"{self._boardroot}cache/{self._data["id"]}.obf", "w") as obffile:
+                # save a local copy
+                with open(
+                    f"{self._boardroot}cache/{self._data['id']}.obf", "w"
+                ) as obffile:
                     obffile.write(contents)
             case _:
-                #assume it is a file.
-                #This code will raise hell if it isn't, but that should be caught downstream by whichever numpty has made this mistake.
+                # assume it is a file.
+                # This code will raise hell if it isn't, but that should be caught downstream by whichever numpty has made this mistake.
                 with open(path_or_url) as fp:
                     self._data = js.load(fp)
         self.buttons = {}
         for btn in self._data["buttons"]:
-            self.buttons[str(btn["id"])] = button(btn)
+            self.buttons[str(btn["id"])] = Button(btn)
 
         self.grid = []
         for row in range(self._data["grid"]["rows"]):
@@ -88,22 +78,23 @@ class board:
             for column in range(self._data["grid"]["columns"]):
                 if self._data["grid"]["order"][row][column] != None:
                     self.grid[row].append(
-                        self.buttons[str(self._data["grid"]["order"][row][column])])
+                        self.buttons[str(self._data["grid"]["order"][row][column])]
+                    )
                 else:
                     self.grid[row].append(None)
 
-
     def __repr__(self):
         retval = ""
-        colwidth = (160//len(self.grid[1]))
+        colwidth = 160 // len(self.grid[1])
         for row in self.grid:
             retval += "\n"
             for btn in row:
                 btn_rep = repr(btn)
                 if btn == None:
                     btn_rep = ""
-                retval += f'{btn_rep:<{colwidth}}'
+                retval += f"{btn_rep:<{colwidth}}"
         return retval
+
 
 def load_obf_collection(directory):
     if not directory.endswith("/"):
@@ -111,7 +102,7 @@ def load_obf_collection(directory):
 
     ### find the manifest
     try:
-        with open(directory+"manifest.json","r") as mf:
+        with open(directory + "manifest.json", "r") as mf:
             mf_data = js.load(mf)
     except FileNotFoundError as e:
         logger.warning(f"Could not load board: {e}")
@@ -124,9 +115,7 @@ def load_obf_collection(directory):
     sounds = {}
 
     ### decode the root board
-    root_board = board(directory+mf_data["root"])
+    root_board = Board(directory + mf_data["root"])
 
     ###
     return root_board, images, sounds
-
-

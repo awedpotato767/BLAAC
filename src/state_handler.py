@@ -1,16 +1,7 @@
-import pykka
 import os
 import tomllib
 
-#config file reading
-if not os.path.isfile("config/config.toml"):
-    with open("config/sample_config.toml","r") as conf_file:
-        conf_data = conf_file.read()
-    with open("config/config.toml", "w") as cf:
-        cf.write(str(conf_data))
-
-with open("config/config.toml","rb") as conf_file:
-    global_config = tomllib.load(conf_file)
+import pykka
 
 # actionHandler - the main coordinating thread in BLAAC.
 # Most things touch this at some point.
@@ -20,7 +11,8 @@ with open("config/config.toml","rb") as conf_file:
 # Since this program is designed around asynchronicity, this class regularly broadcasts
 # its state to the actors it knows about.
 
-class stateHandler(pykka.ThreadingActor):
+
+class StateHandler(pykka.ThreadingActor):
     def __init__(self, inp_actors, out_actors, board, images={}, sounds={}):
         super().__init__()
         ### handle parameters
@@ -40,7 +32,7 @@ class stateHandler(pykka.ThreadingActor):
         self._sentence = ""
 
         ### share state with inputs
-        state_message = {"grid_dimensions":(self._grid_rows,self._grid_columns)}
+        state_message = {"grid_dimensions": (self._grid_rows, self._grid_columns)}
         for actor in self._inp_actors:
             actor.tell(state_message)
 
@@ -49,7 +41,7 @@ class stateHandler(pykka.ThreadingActor):
 
     def on_receive(self, message):
         if type(message) == tuple:
-            #unpack tuples recursively
+            # unpack tuples recursively
             for message_ in message:
                 self.on_receive(message_)
 
@@ -57,20 +49,19 @@ class stateHandler(pykka.ThreadingActor):
             case ":clear":
                 self._sentence = ""
             case ":*":
-                pass #catchall for actions
+                pass  # catchall for actions
             case sentence:
                 self.output(sentence)
 
     def add_inp_actors(self, inp_actors):
         self._inp_actors.append(inp_actors)
 
-        state_message = {"grid_dimensions":(self._grid_rows,self._grid_columns)}
+        state_message = {"grid_dimensions": (self._grid_rows, self._grid_columns)}
         for actor in inp_actors:
             actor.tell(state_message)
 
     def output_text(self, sentence):
         if self._out_actors["speech"] != None:
-            self._out_actors["speech"].tell(ProxyCall(
-        attr_path=('say',),
-        args=(sentence,)
-    ))
+            self._out_actors["speech"].tell(
+                ProxyCall(attr_path=("say",), args=(sentence,))
+            )
