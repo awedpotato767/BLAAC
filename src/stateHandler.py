@@ -1,16 +1,9 @@
 import pykka
 import os
 import tomllib
+import obfIO as obf
 
-#config file reading
-if not os.path.isfile("config/config.toml"):
-    with open("config/sample_config.toml","r") as conf_file:
-        conf_data = conf_file.read()
-    with open("config/config.toml", "w") as cf:
-        cf.write(str(conf_data))
-
-with open("config/config.toml","rb") as conf_file:
-    global_config = tomllib.load(conf_file)
+from configIO import global_config
 
 # actionHandler - the main coordinating thread in BLAAC.
 # Most things touch this at some point.
@@ -54,10 +47,14 @@ class stateHandler(pykka.ThreadingActor):
                 self.on_receive(message_)
 
         match message:
-            case ":clear":
+            #FIXME
+            case [":ext_BLAAC_load_board", path_or_url]:
+                self._board =  obf.board(path_or_url)
+                #reset images
+            case [":clear", None]:
                 self._sentence = ""
-            case ":*":
-                pass #catchall for actions
+            case [command, parameter]:
+                logger.warning(f"Statehandler recieved unknown command {command} with parameter {parameter}")
             case sentence:
                 self.output(sentence)
 

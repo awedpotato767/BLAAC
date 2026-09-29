@@ -16,3 +16,8 @@ expressiveness = 0.3
 #Setting the below value to true means that TTS phrases specific to your current voice will take priority over audio clips that are not specific to your current voice.
 #Default: false
 prioritise_tts_over_generic_audio = false
+
+[devices]
+speaker = true
+headphones = true
+terminal = true
